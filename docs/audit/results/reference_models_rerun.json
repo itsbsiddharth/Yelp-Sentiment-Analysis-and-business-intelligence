@@ -121,5 +121,184 @@
    }
   },
   "seconds": 272
+ },
+ "AdaBoost": {
+  "best_params": {
+   "learning_rate": 1
+  },
+  "train_accuracy": 0.6905517453168185,
+  "val_accuracy": 0.6905154818256829,
+  "val_macro_f1": 0.32968518938604746,
+  "val": {
+   "n": 46054,
+   "accuracy": 0.6905154818256829,
+   "macro_f1": 0.32968518938604746,
+   "weighted_f1": 0.5821442500635984,
+   "per_class": {
+    "negative": {
+     "precision": 0.8688845401174168,
+     "recall": 0.05827536422102638,
+     "f1-score": 0.1092250922509225,
+     "support": 7619.0
+    },
+    "neutral": {
+     "precision": 0.4548802946593002,
+     "recall": 0.03456479149174363,
+     "f1-score": 0.06424762647938613,
+     "support": 7146.0
+    },
+    "positive": {
+     "precision": 0.6913333333333334,
+     "recall": 0.994279139633737,
+     "f1-score": 0.8155828494278337,
+     "support": 31289.0
+    }
+   },
+   "confusion_matrix": {
+    "labels": [
+     "negative",
+     "neutral",
+     "positive"
+    ],
+    "rows_true_cols_pred": [
+     [
+      444,
+      141,
+      7034
+     ],
+     [
+      43,
+      247,
+      6856
+     ],
+     [
+      24,
+      155,
+      31110
+     ]
+    ]
+   }
+  },
+  "seconds": 332
+ },
+ "Random Forest": {
+  "best_params": {
+   "max_depth": 20,
+   "min_samples_leaf": 1
+  },
+  "train_accuracy": 0.7607273471742712,
+  "val_accuracy": 0.7179615234290181,
+  "val_macro_f1": 0.4102084279227863,
+  "val": {
+   "n": 46054,
+   "accuracy": 0.7179615234290181,
+   "macro_f1": 0.4102084279227863,
+   "weighted_f1": 0.6307660915462979,
+   "per_class": {
+    "negative": {
+     "precision": 0.7896290050590219,
+     "recall": 0.24583278645491535,
+     "f1-score": 0.3749374436993294,
+     "support": 7619.0
+    },
+    "neutral": {
+     "precision": 0.5238095238095238,
+     "recall": 0.012314581584102995,
+     "f1-score": 0.024063439978124143,
+     "support": 7146.0
+    },
+    "positive": {
+     "precision": 0.714804430757917,
+     "recall": 0.994087378951069,
+     "f1-score": 0.8316244000909054,
+     "support": 31289.0
+    }
+   },
+   "confusion_matrix": {
+    "labels": [
+     "negative",
+     "neutral",
+     "positive"
+    ],
+    "rows_true_cols_pred": [
+     [
+      1873,
+      63,
+      5683
+     ],
+     [
+      331,
+      88,
+      6727
+     ],
+     [
+      168,
+      17,
+      31104
+     ]
+    ]
+   }
+  },
+  "seconds": 171
+ },
+ "XGBoost": {
+  "best_params": {
+   "eta": 0.5,
+   "min_child_weight": 10
+  },
+  "train_accuracy": 0.8471230888059632,
+  "val_accuracy": 0.7783471576844574,
+  "val_macro_f1": 0.6160602396795141,
+  "val": {
+   "n": 46054,
+   "accuracy": 0.7783471576844574,
+   "macro_f1": 0.6160602396795141,
+   "weighted_f1": 0.7532920523341456,
+   "per_class": {
+    "negative": {
+     "precision": 0.7031488841332926,
+     "recall": 0.6037537734610842,
+     "f1-score": 0.6496716333592261,
+     "support": 7619.0
+    },
+    "neutral": {
+     "precision": 0.4949053857350801,
+     "recall": 0.23789532605653513,
+     "f1-score": 0.32133068708061624,
+     "support": 7146.0
+    },
+    "positive": {
+     "precision": 0.8189705352440613,
+     "recall": 0.9442935216849372,
+     "f1-score": 0.8771783985986997,
+     "support": 31289.0
+    }
+   },
+   "confusion_matrix": {
+    "labels": [
+     "negative",
+     "neutral",
+     "positive"
+    ],
+    "rows_true_cols_pred": [
+     [
+      4600,
+      778,
+      2241
+     ],
+     [
+      1156,
+      1700,
+      4290
+     ],
+     [
+      786,
+      957,
+      29546
+     ]
+    ]
+   }
+  },
+  "seconds": 1976
  }
 }

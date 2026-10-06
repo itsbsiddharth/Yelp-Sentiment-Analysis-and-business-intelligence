@@ -56,8 +56,7 @@ Working brief: audit, rebuild and ship this project in phases (0 audit → 1 pla
 5. **The original notebooks.** Keep them (e.g. under `archive/`) for transparency, or remove them
    from the main tree (they stay in history and under the `v0-original` tag)?
 
-## Still running at the time of writing
+## Not finished
 
-- `docs/audit/rerun_reference_models.py` for AdaBoost, random forest, XGBoost and KNN (the decision
-  tree is done and reproduces the pasted numbers exactly). Results are appended to
-  `docs/audit/results/reference_models_rerun.json`; re-run `make_report.py` afterwards.
+- KNN was not re-run (`rerun_reference_models.py --models KNN`): the session's 2-hour limit for
+  background tasks stopped it. The other four pasted models were re-run; see AUDIT.md §3.8.

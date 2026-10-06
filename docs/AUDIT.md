@@ -335,10 +335,10 @@ split, so this number won't influence any modelling choice.
 | Always predict “positive” (majority baseline) | computed in this audit | 0.6794 | 0 | 0.270 | 0.0% |  |  |
 | Logistic Regression | ran in your notebook | 0.7887 | +0.1093 | 0.641 | 26.9% | 0.7887 | 0.641 |
 | Multinomial Naive Bayes | ran in your notebook | 0.6877 | +0.0083 | 0.608 | 56.1% | 0.6877 | 0.608 |
-| XGBoost | pasted from the reference, not run | 0.7755 | +0.0961 | 0.604 | 21.9% | not re-run | not re-run |
-| Random Forest | pasted from the reference, not run | 0.7180 | +0.0386 | 0.410 | 1.2% | not re-run | not re-run |
+| XGBoost | pasted from the reference, not run | 0.7755 | +0.0961 | 0.604 | 21.9% | 0.7783 | 0.616 |
+| Random Forest | pasted from the reference, not run | 0.7180 | +0.0386 | 0.410 | 1.2% | 0.7180 | 0.410 |
 | Decision Tree | pasted from the reference, not run | 0.7086 | +0.0292 | 0.425 | 8.5% | 0.7086 | 0.425 |
-| AdaBoost | pasted from the reference, not run | 0.6905 | +0.0111 | 0.330 | 3.5% | not re-run | not re-run |
+| AdaBoost | pasted from the reference, not run | 0.6905 | +0.0111 | 0.330 | 3.5% | 0.6905 | 0.330 |
 | KNN | pasted from the reference, not run | 0.6806 | +0.0012 | 0.276 | 0.0% | not re-run | not re-run |
 | VADER, original thresholds (same validation rows) | computed in this audit | 0.7139 | +0.0345 | 0.487 | 9.9% |  |  |
 <!-- END GENERATED: baselines -->
@@ -460,9 +460,14 @@ Source: `results/modeling.json: stopwords_and_vocabulary`.
 reference's own `Classification.py` (loaded from the reference clone, not copied into this repo).
 Features, splits and grids are exactly as in the notebook, and the environment is yours
 (scikit-learn 1.3.0, xgboost 2.1.0). The results are in the "re-run" columns of the baseline
-table. They show what your notebook *would* have printed had the cells been run. Where they differ
-from the pasted numbers, the most likely reason is library versions: the reference ran on Python 3.7
-on Kaggle.
+table. They show what your notebook *would* have printed had the cells been run.
+
+- **Decision tree, AdaBoost, random forest:** identical to the pasted numbers, hyperparameters included.
+- **XGBoost:** different. It picks `eta=0.5` instead of `0.001` and scores 0.7783 accuracy / 0.616
+  macro-F1 instead of 0.7755 / 0.604. The reference ran an older xgboost on Python 3.7 (Kaggle);
+  xgboost 2.x uses a different default tree method, so the grid search lands elsewhere.
+- **KNN:** not re-run. The job was stopped by the session's 2-hour limit for background tasks
+  (the reference's own run took 3 hours). Its pasted result is unverified.
 
 ### 3.9 Business-analysis claims
 
@@ -604,10 +609,10 @@ the re-run (no error, and no number depends on it). The exact patches are listed
 | Logistic regression, validation accuracy / macro-F1 | 0.7887 / 0.641 | 0.7887 / 0.641 | Yes | +0.1093 over always-“positive”; neutral recall 26.9% |
 | Logistic regression best hyperparameters | {'C': 0.01, 'penalty': 'l2'} | {"C": 0.01, "penalty": "l2"} | Yes, but meaningless | all 4 l1 settings crashed; the l2 settings differ by 0.00016 CV accuracy |
 | Multinomial NB, validation accuracy / macro-F1 | 0.6877 / 0.608 | 0.6877 / 0.608 | Yes | +0.0083 over always-“positive” |
-| XGBoost, validation accuracy / macro-F1 (cell 73, markdown) | 0.7755 / 0.604 | not re-run | Copied, not run | identical to the reference's output, timing line included; +0.0961 over always-“positive” |
-| Random Forest, validation accuracy / macro-F1 (cell 52, markdown) | 0.7180 / 0.410 | not re-run | Copied, not run | identical to the reference's output, timing line included; +0.0386 over always-“positive” |
+| XGBoost, validation accuracy / macro-F1 (cell 73, markdown) | 0.7755 / 0.604 | 0.7783 / 0.616 (params {"eta": 0.5, "min_child_weight": 10}) | Copied, not run | identical to the reference's output, timing line included; +0.0961 over always-“positive” |
+| Random Forest, validation accuracy / macro-F1 (cell 52, markdown) | 0.7180 / 0.410 | 0.7180 / 0.410 (params {"max_depth": 20, "min_samples_leaf": 1}) | Copied, not run | identical to the reference's output, timing line included; +0.0386 over always-“positive” |
 | Decision Tree, validation accuracy / macro-F1 (cell 57, markdown) | 0.7086 / 0.425 | 0.7086 / 0.425 (params {"max_depth": 10, "min_samples_leaf": 100}) | Copied, not run | identical to the reference's output, timing line included; +0.0292 over always-“positive” |
-| AdaBoost, validation accuracy / macro-F1 (cell 68, markdown) | 0.6905 / 0.330 | not re-run | Copied, not run | identical to the reference's output, timing line included; +0.0111 over always-“positive” |
+| AdaBoost, validation accuracy / macro-F1 (cell 68, markdown) | 0.6905 / 0.330 | 0.6905 / 0.330 (params {"learning_rate": 1}) | Copied, not run | identical to the reference's output, timing line included; +0.0111 over always-“positive” |
 | KNN, validation accuracy / macro-F1 (cell 62, markdown) | 0.6806 / 0.276 | not re-run | Copied, not run | identical to the reference's output, timing line included; +0.0012 over always-“positive” |
 | Reference README: “XGBoost and Logistic Regression displayed best results” | — | logistic regression is best on accuracy and macro-F1; XGBoost is second on accuracy but below Naive Bayes on macro-F1 | Partly |  |
 | “Best models will be then tested again.” (Modeling and Evaluation.ipynb, cell 0) | section 5.2 is empty | test features were built with a re-fitted vectorizer (1082 columns vs 1095), so any test evaluation would have crashed | No | evaluated once in this audit: logistic regression test accuracy 0.7936, macro-F1 0.648 |
