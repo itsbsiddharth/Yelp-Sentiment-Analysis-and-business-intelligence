@@ -1,0 +1,385 @@
+{
+ "modeling": {
+  "executed": {
+   "Logistic Regression": {
+    "model": "Logistic Regression",
+    "train_accuracy": 0.801329,
+    "val_accuracy_scores_table": 0.788683,
+    "best_params": "{'C': 0.01, 'penalty': 'l2'}",
+    "timing_line": "CPU times: total: 7.69 s",
+    "val_accuracy": 0.788683,
+    "val_macro_f1": 0.640916,
+    "val_macro_precision": 0.681772,
+    "val_macro_recall": 0.627108,
+    "per_class": {
+     "negative(0)": {
+      "precision": 0.694542,
+      "recall": 0.678042,
+      "f1": 0.686192
+     },
+     "neutral(1)": {
+      "precision": 0.51226,
+      "recall": 0.268962,
+      "f1": 0.352725
+     },
+     "positive(2)": {
+      "precision": 0.838515,
+      "recall": 0.934322,
+      "f1": 0.88383
+     }
+    },
+    "cell": 43
+   },
+   "Multinomial Naive Bayes": {
+    "model": "Multinomial Naive Bayes",
+    "train_accuracy": 0.696545,
+    "val_accuracy_scores_table": 0.687671,
+    "best_params": "{'alpha': 0.001}",
+    "timing_line": "CPU times: total: 109 ms",
+    "val_accuracy": 0.687671,
+    "val_macro_f1": 0.607953,
+    "val_macro_precision": 0.594613,
+    "val_macro_recall": 0.651513,
+    "per_class": {
+     "negative(0)": {
+      "precision": 0.526862,
+      "recall": 0.673185,
+      "f1": 0.591103
+     },
+     "neutral(1)": {
+      "precision": 0.346822,
+      "recall": 0.561293,
+      "f1": 0.428732
+     },
+     "positive(2)": {
+      "precision": 0.910156,
+      "recall": 0.720061,
+      "f1": 0.804025
+     }
+    },
+    "cell": 47
+   }
+  },
+  "pasted_as_markdown": {
+   "Random Forest": {
+    "model": "Random Forest",
+    "train_accuracy": 0.760727,
+    "val_accuracy_scores_table": 0.717962,
+    "best_params": "{'max_depth': 20, 'min_samples_leaf': 1}",
+    "timing_line": "CPU times: user 3min 36s, sys: 500 ms, total: 3min 36s",
+    "val_accuracy": 0.717962,
+    "val_macro_f1": 0.410208,
+    "val_macro_precision": 0.676081,
+    "val_macro_recall": 0.417412,
+    "per_class": {
+     "negative(0)": {
+      "precision": 0.789629,
+      "recall": 0.245833,
+      "f1": 0.374937
+     },
+     "neutral(1)": {
+      "precision": 0.52381,
+      "recall": 0.012315,
+      "f1": 0.024063
+     },
+     "positive(2)": {
+      "precision": 0.714804,
+      "recall": 0.994087,
+      "f1": 0.831624
+     }
+    },
+    "cell": 52
+   },
+   "Decision Tree": {
+    "model": "Decision Tree",
+    "train_accuracy": 0.711174,
+    "val_accuracy_scores_table": 0.708625,
+    "best_params": "{'max_depth': 10, 'min_samples_leaf': 100}",
+    "timing_line": "CPU times: user 3min 9s, sys: 122 ms, total: 3min 9s",
+    "val_accuracy": 0.708625,
+    "val_macro_f1": 0.424661,
+    "val_macro_precision": 0.604976,
+    "val_macro_recall": 0.418793,
+    "per_class": {
+     "negative(0)": {
+      "precision": 0.6946,
+      "recall": 0.195826,
+      "f1": 0.305519
+     },
+     "neutral(1)": {
+      "precision": 0.4,
+      "recall": 0.084523,
+      "f1": 0.139556
+     },
+     "positive(2)": {
+      "precision": 0.720327,
+      "recall": 0.97603,
+      "f1": 0.828907
+     }
+    },
+    "cell": 57
+   },
+   "KNN": {
+    "model": "KNN",
+    "train_accuracy": 0.680715,
+    "val_accuracy_scores_table": 0.680636,
+    "best_params": "{'n_neighbors': 150}",
+    "timing_line": "CPU times: user 44min 6s, sys: 11min 51s, total: 55min 57s",
+    "val_accuracy": 0.680636,
+    "val_macro_f1": 0.276043,
+    "val_macro_precision": 0.478601,
+    "val_macro_recall": 0.33629,
+    "per_class": {
+     "negative(0)": {
+      "precision": 0.755319,
+      "recall": 0.009319,
+      "f1": 0.01841
+     },
+     "neutral(1)": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     },
+     "positive(2)": {
+      "precision": 0.680483,
+      "recall": 0.999553,
+      "f1": 0.809719
+     }
+    },
+    "cell": 62
+   },
+   "AdaBoost": {
+    "model": "AdaBoost",
+    "train_accuracy": 0.690552,
+    "val_accuracy_scores_table": 0.690515,
+    "best_params": "{'learning_rate': 1}",
+    "timing_line": "CPU times: user 1min 56s, sys: 2.36 s, total: 1min 59s",
+    "val_accuracy": 0.690515,
+    "val_macro_f1": 0.329685,
+    "val_macro_precision": 0.671699,
+    "val_macro_recall": 0.362373,
+    "per_class": {
+     "negative(0)": {
+      "precision": 0.868885,
+      "recall": 0.058275,
+      "f1": 0.109225
+     },
+     "neutral(1)": {
+      "precision": 0.45488,
+      "recall": 0.034565,
+      "f1": 0.064248
+     },
+     "positive(2)": {
+      "precision": 0.691333,
+      "recall": 0.994279,
+      "f1": 0.815583
+     }
+    },
+    "cell": 68
+   },
+   "XGBoost": {
+    "model": "XGBoost",
+    "train_accuracy": 0.825757,
+    "val_accuracy_scores_table": 0.775546,
+    "best_params": "{'eta': 0.001, 'min_child_weight': 10}",
+    "timing_line": "CPU times: user 33min 30s, sys: 1.38 s, total: 33min 32s",
+    "val_accuracy": 0.775546,
+    "val_macro_f1": 0.604118,
+    "val_macro_precision": 0.677669,
+    "val_macro_recall": 0.579122,
+    "per_class": {
+     "negative(0)": {
+      "precision": 0.71717,
+      "recall": 0.564116,
+      "f1": 0.631502
+     },
+     "neutral(1)": {
+      "precision": 0.508607,
+      "recall": 0.219144,
+      "f1": 0.306308
+     },
+     "positive(2)": {
+      "precision": 0.807231,
+      "recall": 0.954105,
+      "f1": 0.874544
+     }
+    },
+    "cell": 73
+   }
+  },
+  "X_train_scaled_shape_output": "(153513, 1095)",
+  "models_comparison_table_output": "                Model Name  Train Accuracy  Validation Accuracy  \\\n0      Logistic Regression        0.801329             0.788683   \n0  Multinomial Naive Bayes        0.696545             0.687671   \n\n   Accuracy Difference  \n0             0.012646  \n0             0.008874  "
+ },
+ "sentiment": {
+  "vader_rule_code": "'negative' if s < 0 else ('neutral' if s < 0.5 else 'positive')",
+  "vader_accuracy": 0.7144895910618426,
+  "vader_classification_report_cell_has_output": false,
+  "vader_confusion_matrix": [
+   [
+    14802,
+    5341,
+    18102
+   ],
+   [
+    3332,
+    3487,
+    28449
+   ],
+   [
+    3728,
+    6467,
+    145422
+   ]
+  ],
+  "textblob_accuracy": 0.6773840178064854,
+  "textblob_confusion_matrix": [
+   [
+    6220,
+    17930,
+    14095
+   ],
+   [
+    754,
+    7977,
+    26537
+   ],
+   [
+    1184,
+    13421,
+    141012
+   ]
+  ],
+  "textblob_disagreement_pct": 32.26,
+  "textblob_mean_polarity_by_label": {
+   "negative": 0.041788,
+   "neutral": 0.192821,
+   "positive": 0.304194
+  },
+  "vader_from_confusion_matrix": {
+   "n": 229130,
+   "accuracy": 0.7144895910618426,
+   "macro_f1": 0.4890643508679771,
+   "per_class_f1": {
+    "negative": 0.49252166968905453,
+    "neutral": 0.1379269426260309,
+    "positive": 0.836744440288846
+   },
+   "per_class_recall": {
+    "negative": 0.3870309844424108,
+    "neutral": 0.09887149824203244,
+    "positive": 0.9344865920818419
+   },
+   "per_class_precision": {
+    "negative": 0.677065227335102,
+    "neutral": 0.22798300098071264,
+    "positive": 0.7575127752340173
+   }
+  },
+  "textblob_from_confusion_matrix": {
+   "n": 229130,
+   "accuracy": 0.6773840178064854,
+   "macro_f1": 0.43939233536329597,
+   "per_class_f1": {
+    "negative": 0.26808611512186714,
+    "neutral": 0.21387205748297494,
+    "positive": 0.8362188334850458
+   },
+   "per_class_recall": {
+    "negative": 0.1626356386455746,
+    "neutral": 0.22618237495746854,
+    "positive": 0.9061477859102798
+   },
+   "per_class_precision": {
+    "negative": 0.7624417749448394,
+    "neutral": 0.20283258746948737,
+    "positive": 0.7763097046970998
+   }
+  }
+ },
+ "eda": {
+  "comment_zero_cool_reviewers": "# 39,450 reviewers have received 0 \"cool\" votes",
+  "mean_cool_votes_per_reviewer_printed": 246.41569414742722,
+  "corr_reviewer_cool_stars_printed": -0.004295222041795148,
+  "comment_review_length_claim": "so from plot we can say 500 to 2000 length reviews (characters) are more likely to get more cool votes"
+ },
+ "business": {
+  "markdown_claims": {
+   "cell_10": "# What businesses are getting top reviews?\n\nTop three rated businesses are:\n1. Pizzeria Bianco (stars: 4.0) with 803 reviews\n2. Four Peaks Brewing Co (stars: 4.5) with 735 reviews \n3. Matt's Big Breakfast (stars: 4.0) with 689 reviews.",
+   "cell_15": "##  How often do businesses get reviewed over time?\n\n**Note:** The year 2013 has only reviews for the first 5 days of the year, so this year will not be taken into consideration. Year 2005 contains reviews from March 2005, and it will not be taken into consideration.\n\nNumber of reviews per year show a positive linear climb. For the sake of visualization, I picked 4 businesses from the list to analyze the trend of reviews over time. Highly reviewed businesses such as the Phoenix Sky Airport, and Pizzeria Bianco show a positive trend over years. The randomly selected two businesses from the list show a slightly different story: there was a steady positive trend of number of reviews up until the year 2010 and 2011, and the year 2012 recorded a drop in reviews for both establishments.\n\nThis steady growth in reviews can potentially show us these businesses value their customer's feedback, and are creating - as well as actively pursuing - a good business environment.",
+   "cell_31": "# Which business categories get bad reviews?\n\n**Note:** For the sake of interpretation only the top 7 categories were chosen for the visualization.\n\nWhen looking at all categories of businesses that get less than 2 stars per review, the highest number of these reviews, almost 50%, goes to Restaurants, followed by Shopping, and Food. By looking at categories of top 30 businesses with an aggregated business star less than 2, there is no difference in categories, except the presence of the Automotive category. The highest number of bad reviews is US Airways with 95 1-star review, whereas the mean number of 1-star reviews is 43.\nAgain, this indicates that the dominant category in the dataset is Restaurants, and is most often reviewed."
+  },
+  "review_counts_printed": {
+   "Total number of reviews": "229130",
+   "Positive reviews": "155617",
+   "Neutral reviews": "35268",
+   "Negative reviews": "38245",
+   "Useful reviews": "134110",
+   "Cool reviews": "85432",
+   "Funny reviews": "68181"
+  },
+  "top_rated_slice": "50",
+  "top_rated_title": "Top 30 Rated Businesses",
+  "top_rated_xlabel": "Number of Positive Reviews",
+  "hardcoded_other_categories_cell_29": [
+   [
+    "8",
+    "28"
+   ],
+   [
+    "10",
+    "29"
+   ]
+  ],
+  "sum_of_categories_with_1_to_6_occurrences_printed": 237,
+  "top_bad_words_rows_dropped_by_position": [
+   0,
+   1,
+   10,
+   17
+  ]
+ },
+ "modeling_vs_reference_notebook4": {
+  "Random Forest": {
+   "identical_numbers_and_params": true,
+   "identical_timing_line": true,
+   "timing_line_here": "CPU times: user 3min 36s, sys: 500 ms, total: 3min 36s",
+   "timing_line_reference": "CPU times: user 3min 36s, sys: 500 ms, total: 3min 36s"
+  },
+  "Decision Tree": {
+   "identical_numbers_and_params": true,
+   "identical_timing_line": true,
+   "timing_line_here": "CPU times: user 3min 9s, sys: 122 ms, total: 3min 9s",
+   "timing_line_reference": "CPU times: user 3min 9s, sys: 122 ms, total: 3min 9s"
+  },
+  "KNN": {
+   "identical_numbers_and_params": true,
+   "identical_timing_line": true,
+   "timing_line_here": "CPU times: user 44min 6s, sys: 11min 51s, total: 55min 57s",
+   "timing_line_reference": "CPU times: user 44min 6s, sys: 11min 51s, total: 55min 57s"
+  },
+  "AdaBoost": {
+   "identical_numbers_and_params": true,
+   "identical_timing_line": true,
+   "timing_line_here": "CPU times: user 1min 56s, sys: 2.36 s, total: 1min 59s",
+   "timing_line_reference": "CPU times: user 1min 56s, sys: 2.36 s, total: 1min 59s"
+  },
+  "XGBoost": {
+   "identical_numbers_and_params": true,
+   "identical_timing_line": true,
+   "timing_line_here": "CPU times: user 33min 30s, sys: 1.38 s, total: 33min 32s",
+   "timing_line_reference": "CPU times: user 33min 30s, sys: 1.38 s, total: 33min 32s"
+  },
+  "Logistic Regression": {
+   "identical_numbers_and_params": true,
+   "timing_line_here": "CPU times: total: 7.69 s",
+   "timing_line_reference": "CPU times: user 12.8 s, sys: 201 ms, total: 13 s",
+   "note": "executed in this repo's notebook (Windows timing format)"
+  },
+  "Multinomial Naive Bayes": {
+   "identical_numbers_and_params": true,
+   "timing_line_here": "CPU times: total: 109 ms",
+   "timing_line_reference": "CPU times: user 367 ms, sys: 30.1 ms, total: 397 ms",
+   "note": "executed in this repo's notebook (Windows timing format)"
+  }
+ }
+}

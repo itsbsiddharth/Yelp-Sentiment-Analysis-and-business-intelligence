@@ -1,0 +1,164 @@
+{
+ "scope": {
+  "n_reviews": 229130,
+  "n_reviews_with_text": 229124,
+  "n_reviews_missing_text": 6,
+  "n_businesses": 11360,
+  "n_business_ids_in_reviews": 11360,
+  "n_user_rows": 43873,
+  "n_user_ids_in_reviews": 45865,
+  "n_reviews_from_users_missing_from_user_file": 13960,
+  "date_min": "2005-03-07",
+  "date_max": "2013-01-05",
+  "reviews_per_year": {
+   "2005": 101,
+   "2006": 1214,
+   "2007": 6652,
+   "2008": 16952,
+   "2009": 26597,
+   "2010": 42478,
+   "2011": 63585,
+   "2012": 70106,
+   "2013": 1445
+  },
+  "first_review_2005": "2005-03-07",
+  "last_review_2013": "2013-01-05",
+  "states_reviews": {
+   "AZ": 229114,
+   "CA": 6,
+   "SC": 5,
+   "CO": 5
+  },
+  "states_businesses": {
+   "AZ": 11357,
+   "CA": 1,
+   "SC": 1,
+   "CO": 1
+  },
+  "top_cities_businesses": {
+   "Phoenix": 4084,
+   "Scottsdale": 2009,
+   "Tempe": 1136,
+   "Mesa": 885,
+   "Chandler": 855,
+   "Glendale": 591,
+   "Gilbert": 433,
+   "Peoria": 264
+  },
+  "stars_counts": {
+   "1": 17348,
+   "2": 20897,
+   "3": 35268,
+   "4": 79705,
+   "5": 75912
+  },
+  "label_counts_all_rows": {
+   "negative": 38245,
+   "neutral": 35268,
+   "positive": 155617
+  },
+  "label_share_all_rows": {
+   "negative": 0.166914,
+   "neutral": 0.153921,
+   "positive": 0.679165
+  }
+ },
+ "provenance": {
+  "committed_sha256": {
+   "business_prepared.csv": "78d7037331b1e708bc4bb1fc65b2d85a3c71c15b6086bec370d496e2c45469b3",
+   "review_prepared.csv": "e78df778fe286273ffaef5c3852b15d88fd775e878fb5a4aad9d0cb275b68808",
+   "user_prepared.csv": "4c950af5ebaae66ebf85e9819d520c43159e2e7d139a4775b4484c76923b57ea"
+  },
+  "reference_check": {
+   "business_prepared": {
+    "reference_file": "business_prepared.csv",
+    "reference_sha256": "196e2c9d0ac21f6aa2115563a3e7148800f8be8f7adffe89e6b2ca3ac5bd4f7d",
+    "recreated_sha256": "78d7037331b1e708bc4bb1fc65b2d85a3c71c15b6086bec370d496e2c45469b3",
+    "byte_identical_to_committed": true
+   },
+   "user_prepared": {
+    "reference_file": "user_prepared.csv",
+    "reference_sha256": "cf45c95cc87a5f0762d78aaa92f57126dd3a0e0c23db5bd9a184b108e04b1b93",
+    "recreated_sha256": "4c950af5ebaae66ebf85e9819d520c43159e2e7d139a4775b4484c76923b57ea",
+    "byte_identical_to_committed": true
+   },
+   "review_prepared": {
+    "reference_file": "review_prepared.csv.zip",
+    "reference_sha256": "2db3309f888622025dff57cac0c341c690ab16b320e77cc8be8248280652a9be",
+    "recreated_sha256": "e78df778fe286273ffaef5c3852b15d88fd775e878fb5a4aad9d0cb275b68808",
+    "byte_identical_to_committed": true
+   }
+  }
+ },
+ "split_balance": {
+  "train_70pct_of_67pct": {
+   "negative": 0.167478,
+   "neutral": 0.153054,
+   "positive": 0.679468
+  },
+  "val_30pct_of_67pct": {
+   "negative": 0.165436,
+   "neutral": 0.155166,
+   "positive": 0.679398
+  },
+  "test_33pct": {
+   "negative": 0.167026,
+   "neutral": 0.154382,
+   "positive": 0.678592
+  },
+  "all": {
+   "negative": 0.166918,
+   "neutral": 0.153917,
+   "positive": 0.679165
+  },
+  "sizes": {
+   "train": 107459,
+   "val": 46054,
+   "test": 75611
+  }
+ },
+ "duplicates": {
+  "rows_with_text": 229124,
+  "exact_duplicate_rows_beyond_first": 240,
+  "exact_duplicate_text_groups": 149,
+  "normalised_duplicate_rows_beyond_first": 433,
+  "rows_that_are_full_row_duplicates": "0 (review_id is unique: True)",
+  "duplicate_texts_with_conflicting_labels": 15,
+  "most_common_duplicate_texts": {
+   "closed": 13,
+   "This review is for the chain in general. The location we went to is new so it isn't in Yelp yet. Once it is I will put this review there as well. We were there on Friday at 5 PM. \n\nThe reason I gave it 2 stars is because the burger was very good and it was made the way I asked for it. My husbands burger was not.\n\nBut, the server and the fries left a lot to be desired. Let me preface by saying that we had been to several other locations. I like my fries crispy. I ask for them well done, extra crispy, scorched, tortured hollow tubes. Whatever their buzz word is for well done. The location will comply. EVERY OTHER 5 GUYS HAS COMPLIED. But not the one at TATUM AND SHEA. She said that corporate said they are not to cook the fries that way. So if we were to put up with soggy fries - yes soggy, then we did not want them. \n\nShe also interrupted us several times which is rude. THEN she went and called corporate just to double check for us and she came to the table and said they said no they were not to cook them that way. Seriously? We did not ask for her to do this. She actually accused us of being undercover shoppers. We started to say something and then again- she interupted.\n\nListen, if you explain that our choice is not how the company wishes to present their product and we still choose to have them a different way, you should comply. It is after all our money and our decision. I was raised with the rules that #1 the customer is always right. And #2 if the customer is wrong REFER TO RULE NUMBER 1!!\n\nWe will not return. They have lost our business and I hope she loses her job.\nIf you want to try a really good burger AND FRIES place- go to Paradise Valley Burger Company at 40th Street and Bell. You will not be disappointed.": 11,
+   "Closed": 11,
+   "r.i.p.": 7,
+   "Great food!": 6
+  },
+  "test_rows_whose_exact_text_is_in_train_or_val": 92,
+  "val_rows_whose_exact_text_is_in_train": 55,
+  "test_rows_whose_normalised_text_is_in_train_or_val": 164,
+  "n_test": 75611,
+  "n_val": 46054,
+  "test_share_exact_dup_of_train": 0.0012167541759796855
+ },
+ "near_duplicates_test_vs_train": {
+  "n_test_sampled": 2000,
+  "sample_seed": 0,
+  "share_max_cosine_ge_0.99": 0.001,
+  "share_max_cosine_ge_0.9": 0.003,
+  "share_max_cosine_ge_0.8": 0.004,
+  "median_max_cosine": 0.3487043110706082
+ },
+ "eda_claims": {
+  "mean_reviewer_cool_over_review_rows": 246.41569414742722,
+  "mean_reviewer_cool_over_unique_users_in_reviews": 49.95652458301537,
+  "mean_reviewer_cool_over_user_file": 52.23971463086637,
+  "review_rows_with_reviewer_cool_eq_0": 39248,
+  "unique_users_with_reviewer_cool_eq_0": 18030,
+  "review_rows_with_reviewer_average_stars_eq_0": 13961,
+  "review_rows_with_reviewer_blank_true": 13960,
+  "rows_avg0_and_blank": 13960,
+  "rows_avg0_and_not_blank": 1,
+  "corr_reviewer_cool_vs_stars": -0.004295222041795143,
+  "spearman_review_cool_vs_review_length": 0.29220871089685324,
+  "spearman_reviewer_cool_vs_review_length": 0.2787865028723683,
+  "review_length_definition": "characters (text.str.len()), matches committed column for 229124 of 229124 non-null rows"
+ }
+}

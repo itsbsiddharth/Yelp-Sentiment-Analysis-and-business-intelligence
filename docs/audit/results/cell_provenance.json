@@ -1,0 +1,2078 @@
+{
+ "reference_notebooks": [
+  "1. Data Preprocessing and Basic EDA.ipynb",
+  "2. Business Case Data Analysis.ipynb",
+  "3. Sentiment Analysis.ipynb",
+  "4. Modeling and Evaluation.ipynb"
+ ],
+ "thresholds": {
+  "MODIFIED": ">= 0.6",
+  "OWN": "< 0.6"
+ },
+ "notebooks": {
+  " Business Case Data Analysis.ipynb": {
+   "counts": {
+    "IDENTICAL": 26,
+    "OWN": 16,
+    "MODIFIED": 14,
+    "EMPTY": 1
+   },
+   "cells": [
+    {
+     "cell": 0,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 5",
+     "first_line": "# Business Case Data Analysis"
+    },
+    {
+     "cell": 1,
+     "type": "markdown",
+     "label": "OWN",
+     "similarity": 0.26,
+     "closest_reference": null,
+     "first_line": "# Business Case Data Analysis: Extracting Actionable Insights from Yelp Reviews This section of our "
+    },
+    {
+     "cell": 2,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 1",
+     "first_line": "# Imports"
+    },
+    {
+     "cell": 3,
+     "type": "code",
+     "label": "MODIFIED",
+     "similarity": 0.95,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 2",
+     "first_line": "#basic libraries for linear algebra and data procesing import numpy as np import pandas as pd #visua"
+    },
+    {
+     "cell": 4,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 4",
+     "first_line": "#loading the datasets business = pd.read_csv('data/business_prepared.csv') review = pd.read_csv('dat"
+    },
+    {
+     "cell": 5,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 3",
+     "first_line": "# Data"
+    },
+    {
+     "cell": 6,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.39,
+     "closest_reference": null,
+     "first_line": "# \"business stars\" refers to the average rating that a business receives from its customers."
+    },
+    {
+     "cell": 7,
+     "type": "code",
+     "label": "MODIFIED",
+     "similarity": 0.87,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 7",
+     "first_line": "print('Total number of reviews: ', len(review)) # the code filters the review DataFrame to include o"
+    },
+    {
+     "cell": 8,
+     "type": "markdown",
+     "label": "MODIFIED",
+     "similarity": 0.94,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 6",
+     "first_line": "# Business Case Data Analysis ### Counting reviews There are several types of reviews in the dataset"
+    },
+    {
+     "cell": 9,
+     "type": "code",
+     "label": "MODIFIED",
+     "similarity": 0.76,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 9",
+     "first_line": "#creating a new dataframe that contains top 50 rated business sorted by the number of positive revie"
+    },
+    {
+     "cell": 10,
+     "type": "markdown",
+     "label": "MODIFIED",
+     "similarity": 0.99,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 8",
+     "first_line": "# What businesses are getting top reviews? Top three rated businesses are: 1. Pizzeria Bianco (stars"
+    },
+    {
+     "cell": 11,
+     "type": "markdown",
+     "label": "OWN",
+     "similarity": 0.43,
+     "closest_reference": null,
+     "first_line": "## Sample data data = { 'business_name': ['Business A', 'Business B', 'Business C'], 'business_categ"
+    },
+    {
+     "cell": 12,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 11",
+     "first_line": "#separating values in categories and saving it to a list, and removing leading and trailing white sp"
+    },
+    {
+     "cell": 13,
+     "type": "code",
+     "label": "MODIFIED",
+     "similarity": 1.0,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 12",
+     "first_line": "#visualizing the share of each category present in the top 30 reviewed businesses size = cat_top_rat"
+    },
+    {
+     "cell": 14,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 13",
+     "first_line": "#top 10 occurences of business categories accross the entire dataset #separating values in categorie"
+    },
+    {
+     "cell": 15,
+     "type": "markdown",
+     "label": "MODIFIED",
+     "similarity": 1.0,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 14",
+     "first_line": "## How often do businesses get reviewed over time? **Note:** The year 2013 has only reviews for the "
+    },
+    {
+     "cell": 16,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 15",
+     "first_line": "#checking the range of dates print('Least recent date: ', review['date'].min()) print('Recent date: "
+    },
+    {
+     "cell": 17,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 16",
+     "first_line": "**Visualizing Number of reviews per year**"
+    },
+    {
+     "cell": 18,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 17",
+     "first_line": "#creating a new column that contains the year of review review[\"date\"]= pd.to_datetime(review[\"date\""
+    },
+    {
+     "cell": 19,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 18",
+     "first_line": "#number of reviews per year not including 2005 and 2013 reviews_per_year = review.groupby(['year'])."
+    },
+    {
+     "cell": 20,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 16",
+     "first_line": "**Visualizing Number of reviews per year**"
+    },
+    {
+     "cell": 21,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 20",
+     "first_line": "#visualizing top 10 businesses with most rewiews most_reviewed = business[['business_name', 'busines"
+    },
+    {
+     "cell": 22,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 21",
+     "first_line": "**Visualizing frequency of reviews per year for four businesses in the top list**"
+    },
+    {
+     "cell": 23,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 22",
+     "first_line": "# Pizzeria Bianco pizzeria_blanco = review.loc[review['business_name'] == 'Pizzeria Bianco'].sort_va"
+    },
+    {
+     "cell": 24,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 23",
+     "first_line": "fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(ncols=2, nrows=2, figsize=(16, 7)) sns.barplot(data = p"
+    },
+    {
+     "cell": 25,
+     "type": "markdown",
+     "label": "MODIFIED",
+     "similarity": 0.97,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 24",
+     "first_line": "## How do the categories of trending and top reviewed businesses differ?"
+    },
+    {
+     "cell": 26,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 25",
+     "first_line": "#setting the condition and creating a dataframe of trending businesses trend_cond = review[(review['"
+    },
+    {
+     "cell": 27,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.32,
+     "closest_reference": null,
+     "first_line": "# Trending reflects what's hot now, while top reviewed shows what's consistently good over time. # B"
+    },
+    {
+     "cell": 28,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 26",
+     "first_line": "#separating values in categories and saving it to a list, and removing leading and trailing white sp"
+    },
+    {
+     "cell": 29,
+     "type": "code",
+     "label": "MODIFIED",
+     "similarity": 0.62,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 27",
+     "first_line": "#combining categories with >2 occurance in a 'Other' category cat_top_trend.loc[8] = ['Other Categor"
+    },
+    {
+     "cell": 30,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 31",
+     "first_line": "#visualizing categories of top trending and top rated businesses ax = plt.subplots(figsize=(12,6)) a"
+    },
+    {
+     "cell": 31,
+     "type": "markdown",
+     "label": "MODIFIED",
+     "similarity": 1.0,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 32",
+     "first_line": "# Which business categories get bad reviews? **Note:** For the sake of interpretation only the top 7"
+    },
+    {
+     "cell": 32,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 33",
+     "first_line": "#filtering bad reviews and creating a dataframe bad_stars_cond = review[(review['stars'] < 2)].drop_"
+    },
+    {
+     "cell": 33,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 34",
+     "first_line": "#visualizing categories of bad reviews size = cat_bad_reviews.nlargest(7, 'occurance')['occurance'] "
+    },
+    {
+     "cell": 34,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 35",
+     "first_line": "len_occur = [] i = 1 while i < 7: occur = len(cat_bad_reviews[cat_bad_reviews['occurance'] == i]) le"
+    },
+    {
+     "cell": 35,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 36",
+     "first_line": "**Visualizing businesses with the highest number of bad reviews**"
+    },
+    {
+     "cell": 36,
+     "type": "markdown",
+     "label": "OWN",
+     "similarity": 0.38,
+     "closest_reference": null,
+     "first_line": "# problem i faced here and how i solved it"
+    },
+    {
+     "cell": 37,
+     "type": "code",
+     "label": "MODIFIED",
+     "similarity": 0.71,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 37",
+     "first_line": "# #setting the condition and creating a dataframe of businesses with the highest number of bad revie"
+    },
+    {
+     "cell": 38,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.31,
+     "closest_reference": null,
+     "first_line": "# bad_stars = bad_stars.business_name.value_counts().reset_index().rename(columns = {'index':'busine"
+    },
+    {
+     "cell": 39,
+     "type": "code",
+     "label": "MODIFIED",
+     "similarity": 0.83,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 37",
+     "first_line": "# Assuming 'review' is your DataFrame # Setting the condition and creating a DataFrame of businesses"
+    },
+    {
+     "cell": 40,
+     "type": "markdown",
+     "label": "MODIFIED",
+     "similarity": 0.95,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 38",
+     "first_line": "# What are the most common words in bad reviews?"
+    },
+    {
+     "cell": 41,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 39",
+     "first_line": "#creating a dataframe with only 1-star reviews bad_words_cond = review[review['stars'] == 1] bad_wor"
+    },
+    {
+     "cell": 42,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 40",
+     "first_line": "print('Shape of the dataframe: ', bad_words.shape)"
+    },
+    {
+     "cell": 43,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.24,
+     "closest_reference": null,
+     "first_line": "%%time from tqdm.notebook import tqdm # Ensure you have the model loaded if 'nlp' not in globals(): "
+    },
+    {
+     "cell": 44,
+     "type": "markdown",
+     "label": "OWN",
+     "similarity": 0.2,
+     "closest_reference": null,
+     "first_line": "### Key Points - **`doc`**: This is the list of processed text documents. Each item in `doc` is a pr"
+    },
+    {
+     "cell": 45,
+     "type": "markdown",
+     "label": "OWN",
+     "similarity": 0.21,
+     "closest_reference": null,
+     "first_line": "## Key Learnings from Processing Text Data with spaCy and tqdm ### spaCy Performance - spaCy is powe"
+    },
+    {
+     "cell": 46,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 42",
+     "first_line": "#extract all the properties of each word def extract_tokens(doc:spacy.tokens.doc.Doc): \"\"\"Extract to"
+    },
+    {
+     "cell": 47,
+     "type": "markdown",
+     "label": "OWN",
+     "similarity": 0.17,
+     "closest_reference": null,
+     "first_line": "## EXPLAINING THE ABOVE CODE extract_tokens(docs[0]) [ ('This', 0, 'this', '', 'DT', 'nsubj', 'DET',"
+    },
+    {
+     "cell": 48,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.3,
+     "closest_reference": null,
+     "first_line": "# Container for Text and Annotations: A Doc object is created by processing a string of text with a "
+    },
+    {
+     "cell": 49,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.43,
+     "closest_reference": null,
+     "first_line": "# Process the document tokens and create a new DataFrame clean_doc = df_tokens(doc) # Display the fi"
+    },
+    {
+     "cell": 50,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 44",
+     "first_line": "#visualizing distribution of number of words per doc plt.figure(figsize=(12,6)) sns.histplot(clean_d"
+    },
+    {
+     "cell": 51,
+     "type": "code",
+     "label": "MODIFIED",
+     "similarity": 0.74,
+     "closest_reference": "2. Business Case Data Analysis.ipynb cell 46",
+     "first_line": "# Ensure clean_doc contains the necessary columns print(clean_doc.head()) # Counting top 15 words in"
+    },
+    {
+     "cell": 52,
+     "type": "markdown",
+     "label": "OWN",
+     "similarity": 0.27,
+     "closest_reference": null,
+     "first_line": "## Fixing the Seaborn Barplot Issue ### Initial Problem The original code didn't work because of a m"
+    },
+    {
+     "cell": 53,
+     "type": "markdown",
+     "label": "OWN",
+     "similarity": 0.24,
+     "closest_reference": null,
+     "first_line": "## Updated the sns.barplot() function to use the correct column names: sns.barplot(data=freq_ent, x="
+    },
+    {
+     "cell": 54,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.37,
+     "closest_reference": null,
+     "first_line": "# this took alot of time"
+    },
+    {
+     "cell": 55,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.37,
+     "closest_reference": null,
+     "first_line": "print('nice work!!!!!!')"
+    },
+    {
+     "cell": 56,
+     "type": "code",
+     "label": "EMPTY",
+     "similarity": 0.0,
+     "closest_reference": null,
+     "first_line": ""
+    }
+   ]
+  },
+  "Data preprocessing and EDA.ipynb": {
+   "counts": {
+    "OWN": 19,
+    "MODIFIED": 20,
+    "IDENTICAL": 26,
+    "EMPTY": 1
+   },
+   "cells": [
+    {
+     "cell": 0,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.39,
+     "closest_reference": null,
+     "first_line": "print('only ws from now on')"
+    },
+    {
+     "cell": 1,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.34,
+     "closest_reference": null,
+     "first_line": "!pip install pandas numpy matplotlib seaborn scikit-learn nltk vaderSentiment"
+    },
+    {
+     "cell": 2,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.49,
+     "closest_reference": null,
+     "first_line": "import pandas as pd import numpy as np import matplotlib.pyplot as plt import seaborn as sns from va"
+    },
+    {
+     "cell": 3,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.56,
+     "closest_reference": null,
+     "first_line": "# Load the prepared datasets business = pd.read_csv('C:/Users/besid/OneDrive/Desktop/on campus inter"
+    },
+    {
+     "cell": 4,
+     "type": "markdown",
+     "label": "MODIFIED",
+     "similarity": 0.93,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 53",
+     "first_line": "## Businesses Dataset"
+    },
+    {
+     "cell": 5,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.39,
+     "closest_reference": null,
+     "first_line": "# Display basic information about each dataset business.info()"
+    },
+    {
+     "cell": 6,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 7",
+     "first_line": "business.head()"
+    },
+    {
+     "cell": 7,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 8",
+     "first_line": "business.columns"
+    },
+    {
+     "cell": 8,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 9",
+     "first_line": "business['business_categories'].value_counts()"
+    },
+    {
+     "cell": 9,
+     "type": "code",
+     "label": "MODIFIED",
+     "similarity": 0.64,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 10",
+     "first_line": "# most reviews / busisness are based phoenix business['business_city'].value_counts()"
+    },
+    {
+     "cell": 10,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 13",
+     "first_line": "business['business_open'].value_counts()"
+    },
+    {
+     "cell": 11,
+     "type": "code",
+     "label": "MODIFIED",
+     "similarity": 0.63,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 14",
+     "first_line": "# 3rd data set or business has the most reviews / famous business['business_review_count'].value_cou"
+    },
+    {
+     "cell": 12,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 15",
+     "first_line": "business['business_stars'].value_counts()"
+    },
+    {
+     "cell": 13,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.55,
+     "closest_reference": null,
+     "first_line": "business['business_state'].value_counts() # AZ: Arizona # CA: California # SC: South Carolina # CO: "
+    },
+    {
+     "cell": 14,
+     "type": "markdown",
+     "label": "MODIFIED",
+     "similarity": 0.94,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 57",
+     "first_line": "## Reviews Dataset"
+    },
+    {
+     "cell": 15,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 20",
+     "first_line": "review.info()"
+    },
+    {
+     "cell": 16,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 21",
+     "first_line": "review.head()"
+    },
+    {
+     "cell": 17,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 22",
+     "first_line": "review.columns"
+    },
+    {
+     "cell": 18,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 23",
+     "first_line": "review['reviewer_average_stars'].value_counts()"
+    },
+    {
+     "cell": 19,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.33,
+     "closest_reference": null,
+     "first_line": "# On Yelp, users can mark reviews as \"cool\" if they find them # particularly helpful, interesting, o"
+    },
+    {
+     "cell": 20,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 24",
+     "first_line": "review['reviewer_cool'].value_counts()"
+    },
+    {
+     "cell": 21,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.48,
+     "closest_reference": null,
+     "first_line": "plt.figure(figsize=(12, 6)) review['reviewer_cool'].hist(bins=50, log=True) plt.title('Distribution "
+    },
+    {
+     "cell": 22,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.51,
+     "closest_reference": null,
+     "first_line": "print(\"Mean 'cool' votes per reviewer:\", review['reviewer_cool'].mean())"
+    },
+    {
+     "cell": 23,
+     "type": "markdown",
+     "label": "OWN",
+     "similarity": 0.46,
+     "closest_reference": null,
+     "first_line": "### Analyze if there's a correlation between \"cool\" votes and star ratings:"
+    },
+    {
+     "cell": 24,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.4,
+     "closest_reference": null,
+     "first_line": "correlation = review['reviewer_cool'].corr(review['stars']) print(f\"Correlation between 'cool' votes"
+    },
+    {
+     "cell": 25,
+     "type": "markdown",
+     "label": "OWN",
+     "similarity": 0.42,
+     "closest_reference": null,
+     "first_line": "### we can see if reviewers with more \"cool\" votes tend to write longer reviews:"
+    },
+    {
+     "cell": 26,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.41,
+     "closest_reference": null,
+     "first_line": "review['review_length'] = review['text'].str.len() plt.figure(figsize=(10, 6)) plt.scatter(review['r"
+    },
+    {
+     "cell": 27,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.33,
+     "closest_reference": null,
+     "first_line": "# so from plot we can say 500 to 2000 length reviews (characters) # are more likely to get more cool"
+    },
+    {
+     "cell": 28,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 26",
+     "first_line": "review['stars'].value_counts()"
+    },
+    {
+     "cell": 29,
+     "type": "code",
+     "label": "MODIFIED",
+     "similarity": 0.91,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 28",
+     "first_line": "review['text'][9]"
+    },
+    {
+     "cell": 30,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 29",
+     "first_line": "review['reviewer_blank'].value_counts()"
+    },
+    {
+     "cell": 31,
+     "type": "markdown",
+     "label": "MODIFIED",
+     "similarity": 0.81,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 46",
+     "first_line": "## users dataset"
+    },
+    {
+     "cell": 32,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 31",
+     "first_line": "user.info()"
+    },
+    {
+     "cell": 33,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 32",
+     "first_line": "user.head()"
+    },
+    {
+     "cell": 34,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.28,
+     "closest_reference": null,
+     "first_line": "# Similar to \"cool\", # users can mark reviews as \"funny\" if they find them humorous. # Users can mar"
+    },
+    {
+     "cell": 35,
+     "type": "markdown",
+     "label": "OWN",
+     "similarity": 0.46,
+     "closest_reference": null,
+     "first_line": "# EDA and Data Cleaning"
+    },
+    {
+     "cell": 36,
+     "type": "markdown",
+     "label": "MODIFIED",
+     "similarity": 0.77,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 34",
+     "first_line": "### i have removed the following features from the datasets.. column_a - contains the index business"
+    },
+    {
+     "cell": 37,
+     "type": "markdown",
+     "label": "MODIFIED",
+     "similarity": 0.9,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 36",
+     "first_line": "## Missing values ### Business Dataset -All missing values have been removed on the business_categor"
+    },
+    {
+     "cell": 38,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 37",
+     "first_line": "#exploring the number of missing values per feature in percentage print('Number of missing values: '"
+    },
+    {
+     "cell": 39,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 39",
+     "first_line": "#removing all missing values in categories business.dropna(subset = ['business_categories'], inplace"
+    },
+    {
+     "cell": 40,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 55",
+     "first_line": "#resetting the index business.reset_index(drop=True, inplace=True) business.head()"
+    },
+    {
+     "cell": 41,
+     "type": "markdown",
+     "label": "MODIFIED",
+     "similarity": 0.97,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 57",
+     "first_line": "## Review Dataset"
+    },
+    {
+     "cell": 42,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 42",
+     "first_line": "#exploring the number of missing values per feature in percentage print('Number of missing values: '"
+    },
+    {
+     "cell": 43,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 44",
+     "first_line": "#removing all missing values in categories review.dropna(subset = ['business_categories'], inplace=T"
+    },
+    {
+     "cell": 44,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.38,
+     "closest_reference": null,
+     "first_line": "# Create a boolean mask of missing values missing_mask = business.isnull() # Create a heatmap plt.fi"
+    },
+    {
+     "cell": 45,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 45",
+     "first_line": "#resetting the index review.reset_index(drop=True, inplace=True) review.head()"
+    },
+    {
+     "cell": 46,
+     "type": "markdown",
+     "label": "MODIFIED",
+     "similarity": 0.97,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 46",
+     "first_line": "## User Dataset"
+    },
+    {
+     "cell": 47,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 47",
+     "first_line": "#exploring the number of missing values per feature in percentage print('Number of missing values: '"
+    },
+    {
+     "cell": 48,
+     "type": "code",
+     "label": "MODIFIED",
+     "similarity": 0.96,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 49",
+     "first_line": "#checking for duplicate rows print(len(business) - len(business.drop_duplicates()))"
+    },
+    {
+     "cell": 49,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 50",
+     "first_line": "#checking for duplicate rows len(review) - len(review.drop_duplicates())"
+    },
+    {
+     "cell": 50,
+     "type": "code",
+     "label": "MODIFIED",
+     "similarity": 0.95,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 51",
+     "first_line": "#checking for duplicate rows print(len(user) - len(user.drop_duplicates()))"
+    },
+    {
+     "cell": 51,
+     "type": "markdown",
+     "label": "MODIFIED",
+     "similarity": 0.81,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 48",
+     "first_line": "There were no duplicate rows detected in the dataset"
+    },
+    {
+     "cell": 52,
+     "type": "markdown",
+     "label": "OWN",
+     "similarity": 0.5,
+     "closest_reference": null,
+     "first_line": "## Removing unnecessary features ### Business Dataset -dropping unnecessary columns in the business "
+    },
+    {
+     "cell": 53,
+     "type": "code",
+     "label": "MODIFIED",
+     "similarity": 0.79,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 54",
+     "first_line": "# business.drop(columns=['column_a', # 'business_neighborhoods', # 'business_location', # 'business_"
+    },
+    {
+     "cell": 54,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 55",
+     "first_line": "#resetting the index business.reset_index(drop=True, inplace=True) business.head()"
+    },
+    {
+     "cell": 55,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 56",
+     "first_line": "print('Number of missing values: ', business.isnull().values.sum()) print('Data lenght: ', len(busin"
+    },
+    {
+     "cell": 56,
+     "type": "markdown",
+     "label": "MODIFIED",
+     "similarity": 0.97,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 57",
+     "first_line": "## Review Dataset"
+    },
+    {
+     "cell": 57,
+     "type": "code",
+     "label": "MODIFIED",
+     "similarity": 0.96,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 58",
+     "first_line": "#dropping unnecessary columns in the review dataset # review.drop(columns=['column_a', # 'business_b"
+    },
+    {
+     "cell": 58,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 59",
+     "first_line": "#resetting the index in the review dataset review.reset_index(drop=True, inplace=True) review.head()"
+    },
+    {
+     "cell": 59,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 60",
+     "first_line": "print('Number of missing values: ', review.isnull().values.sum()) print('Data lenght: ', len(review)"
+    },
+    {
+     "cell": 60,
+     "type": "markdown",
+     "label": "MODIFIED",
+     "similarity": 0.97,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 46",
+     "first_line": "## User Dataset"
+    },
+    {
+     "cell": 61,
+     "type": "code",
+     "label": "MODIFIED",
+     "similarity": 0.7,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 62",
+     "first_line": "#dropping unnecessary columns in the user dataset # user.drop(columns=['column_a', 'reviewer_type'],"
+    },
+    {
+     "cell": 62,
+     "type": "code",
+     "label": "MODIFIED",
+     "similarity": 0.98,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 64",
+     "first_line": "print('Number of missing values are: ', user.isnull().values.sum()) print('Data lenght: ', len(user)"
+    },
+    {
+     "cell": 63,
+     "type": "markdown",
+     "label": "OWN",
+     "similarity": 0.55,
+     "closest_reference": null,
+     "first_line": "## Updating the data for further analysis"
+    },
+    {
+     "cell": 64,
+     "type": "code",
+     "label": "MODIFIED",
+     "similarity": 0.6,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 66",
+     "first_line": "# Set the base path base_path = 'C:/Users/besid/OneDrive/Desktop/on campus internship/machine learni"
+    },
+    {
+     "cell": 65,
+     "type": "code",
+     "label": "EMPTY",
+     "similarity": 0.0,
+     "closest_reference": null,
+     "first_line": ""
+    }
+   ]
+  },
+  "Modeling and Evaluation.ipynb": {
+   "counts": {
+    "MODIFIED": 9,
+    "IDENTICAL": 59,
+    "OWN": 17,
+    "EMPTY": 2
+   },
+   "cells": [
+    {
+     "cell": 0,
+     "type": "markdown",
+     "label": "MODIFIED",
+     "similarity": 0.98,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 0",
+     "first_line": "# Modeling and Evaluation of Sentiment Prediction This stage of the project includes preparing text "
+    },
+    {
+     "cell": 1,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 1",
+     "first_line": "# 1. Imports"
+    },
+    {
+     "cell": 2,
+     "type": "code",
+     "label": "MODIFIED",
+     "similarity": 0.96,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 2",
+     "first_line": "#basic libraries for linear algebra and data processing import numpy as np import pandas as pd #visu"
+    },
+    {
+     "cell": 3,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 3",
+     "first_line": "# 2. Data"
+    },
+    {
+     "cell": 4,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.44,
+     "closest_reference": null,
+     "first_line": "#loading the review dataset file_path = r\"C:\\Users\\besid\\OneDrive\\Desktop\\on campus internship\\machi"
+    },
+    {
+     "cell": 5,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 5",
+     "first_line": "#filtering out the stars and text columns reviews = review[['text', 'stars']].reset_index().drop(col"
+    },
+    {
+     "cell": 6,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 6",
+     "first_line": "print(reviews.shape) reviews.head()"
+    },
+    {
+     "cell": 7,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 7",
+     "first_line": "# 3. Preparing Text"
+    },
+    {
+     "cell": 8,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 8",
+     "first_line": "## 3.1 Removing Missing values Checking if there are missing values I didn't catch the first time"
+    },
+    {
+     "cell": 9,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 9",
+     "first_line": "reviews.isnull().sum()"
+    },
+    {
+     "cell": 10,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 10",
+     "first_line": "reviews.dropna(inplace = True) print(reviews.shape)"
+    },
+    {
+     "cell": 11,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 11",
+     "first_line": "## 3.2 Creating three categories of labels from ratings Creating lables of positive, negative, and n"
+    },
+    {
+     "cell": 12,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 12",
+     "first_line": "reviews['stars'].value_counts()"
+    },
+    {
+     "cell": 13,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 13",
+     "first_line": "#creating labels from stars reviews['label'] = reviews['stars'].apply(lambda s: 'positive' if s >= 4"
+    },
+    {
+     "cell": 14,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 14",
+     "first_line": "reviews['label'].value_counts()"
+    },
+    {
+     "cell": 15,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 15",
+     "first_line": "## 3.3 Train/Test Split"
+    },
+    {
+     "cell": 16,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 16",
+     "first_line": "X = reviews['text'] y = reviews['label']"
+    },
+    {
+     "cell": 17,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 17",
+     "first_line": "X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.33, random_state = 42)"
+    },
+    {
+     "cell": 18,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 18",
+     "first_line": "print('Shape of the X train set: ', X_train.shape) print('Shape of the X test set: ', X_test.shape) "
+    },
+    {
+     "cell": 19,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 19",
+     "first_line": "from sklearn.preprocessing import LabelEncoder label_encoder = LabelEncoder() y_train = label_encode"
+    },
+    {
+     "cell": 20,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 20",
+     "first_line": "## 3.4 Vectorizing the text"
+    },
+    {
+     "cell": 21,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.42,
+     "closest_reference": null,
+     "first_line": "print(type(stopwords))"
+    },
+    {
+     "cell": 22,
+     "type": "markdown",
+     "label": "OWN",
+     "similarity": 0.23,
+     "closest_reference": null,
+     "first_line": "## problem faced and how i solved it stopwords = set(stopwords.words('english')) This line assumes t"
+    },
+    {
+     "cell": 23,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.36,
+     "closest_reference": null,
+     "first_line": "import nltk from nltk.corpus import stopwords as nltk_stopwords # Import with a different name # Dow"
+    },
+    {
+     "cell": 24,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.56,
+     "closest_reference": null,
+     "first_line": "# Convert your set of stopwords to a list custom_stopwords = list(stopwords_set)"
+    },
+    {
+     "cell": 25,
+     "type": "code",
+     "label": "MODIFIED",
+     "similarity": 0.97,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 22",
+     "first_line": "#building the vectorizer vectorizer = TfidfVectorizer(lowercase = True, stop_words = custom_stopword"
+    },
+    {
+     "cell": 26,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 23",
+     "first_line": "#vectorizing the training set X_train_vect = vectorizer.fit_transform(X_train) print('Shape of X_tra"
+    },
+    {
+     "cell": 27,
+     "type": "markdown",
+     "label": "OWN",
+     "similarity": 0.23,
+     "closest_reference": null,
+     "first_line": "## Learning from TfidfVectorizer Stopwords Issue ### Problem: I encountered an error when trying to "
+    },
+    {
+     "cell": 28,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 24",
+     "first_line": "#vectorizing the test set X_test_vect = vectorizer.fit_transform(X_test) print('Shape of X_test vect"
+    },
+    {
+     "cell": 29,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 25",
+     "first_line": "## 3.5 Feature Scaling"
+    },
+    {
+     "cell": 30,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.28,
+     "closest_reference": null,
+     "first_line": "#initializing StandardScaler scaler = StandardScaler(with_mean = False) # StandardScaler is normaliz"
+    },
+    {
+     "cell": 31,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 27",
+     "first_line": "#scaling X_train_vect X_train_scaled = scaler.fit_transform(X_train_vect)"
+    },
+    {
+     "cell": 32,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 28",
+     "first_line": "#scaling X_test_vect X_test_scaled = scaler.fit_transform(X_test_vect)"
+    },
+    {
+     "cell": 33,
+     "type": "code",
+     "label": "MODIFIED",
+     "similarity": 0.64,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 29",
+     "first_line": "print(X_train_scaled.shape) print(y_train.shape) print(f\"Number of samples in y_train: {len(y_train)"
+    },
+    {
+     "cell": 34,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 30",
+     "first_line": "# 4. Classifcation"
+    },
+    {
+     "cell": 35,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 31",
+     "first_line": "## 4.1 Further splitting data into a train and validation set For better model performance, I decide"
+    },
+    {
+     "cell": 36,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.18,
+     "closest_reference": null,
+     "first_line": "# GridSearchCV is a method provided by Scikit-learn to perform hyperparameter tuning. It systematica"
+    },
+    {
+     "cell": 37,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.35,
+     "closest_reference": null,
+     "first_line": "# Check lengths using shape attribute for sparse matrix print(f\"Number of samples in X_train_scaled:"
+    },
+    {
+     "cell": 38,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 32",
+     "first_line": "#splitting the train dataset into a train and validation dataset X_train, X_val, y_train, y_val = tr"
+    },
+    {
+     "cell": 39,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 33",
+     "first_line": "#initializing the Stratified K-fold CV skf = StratifiedKFold(n_splits = 5, random_state = 42, shuffl"
+    },
+    {
+     "cell": 40,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 34",
+     "first_line": "## 4.2 Logistic Regression"
+    },
+    {
+     "cell": 41,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 35",
+     "first_line": "#establishing parameters for GridSearch parameters = {'penalty':['l1','l2'], 'C':[0.01,0.05,0.5,5]}"
+    },
+    {
+     "cell": 42,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 36",
+     "first_line": "#fitting the model log_reg = Classification('Logistic Regression', X_train, X_val, y_train, y_val)"
+    },
+    {
+     "cell": 43,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 37",
+     "first_line": "%%time #getting scores log_reg.get_scores(parameters, skf)"
+    },
+    {
+     "cell": 44,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 38",
+     "first_line": "## 4.3 Multinomial Naive Bayes"
+    },
+    {
+     "cell": 45,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 39",
+     "first_line": "#establishing parameters for GridSearch parameters = {'alpha': [0.001, 0.01, 0.5, 1.0]}"
+    },
+    {
+     "cell": 46,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 40",
+     "first_line": "#fitting the model mnb = Classification('Multinomial Naive Bayes', X_train, X_val, y_train, y_val)"
+    },
+    {
+     "cell": 47,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 41",
+     "first_line": "%%time #getting scores mnb.get_scores(parameters, skf)"
+    },
+    {
+     "cell": 48,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 42",
+     "first_line": "## 4.4 Random Forest"
+    },
+    {
+     "cell": 49,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 43",
+     "first_line": "#establishing parameters for GridSearch parameters = {'min_samples_leaf':[1,3,15,50], 'max_depth':[5"
+    },
+    {
+     "cell": 50,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 44",
+     "first_line": "#fitting the model rf = Classification('Random Forest', X_train, X_val, y_train, y_val)"
+    },
+    {
+     "cell": 51,
+     "type": "code",
+     "label": "MODIFIED",
+     "similarity": 0.95,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 45",
+     "first_line": "# %%time # #getting scores # rf.get_scores(parameters, skf)"
+    },
+    {
+     "cell": 52,
+     "type": "markdown",
+     "label": "OWN",
+     "similarity": 0.15,
+     "closest_reference": null,
+     "first_line": "Out[1]: | Model Name | Train Accuracy | Validation Accuracy | Accuracy Difference | |---------------"
+    },
+    {
+     "cell": 53,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 46",
+     "first_line": "## 4.5 Decision Tree"
+    },
+    {
+     "cell": 54,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 47",
+     "first_line": "#establishing parameters for GridSearch parameters = {'min_samples_leaf':[3,15,50,100], 'max_depth':"
+    },
+    {
+     "cell": 55,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 48",
+     "first_line": "#fitting the model tree = Classification('Decision Tree', X_train, X_val, y_train, y_val)"
+    },
+    {
+     "cell": 56,
+     "type": "code",
+     "label": "MODIFIED",
+     "similarity": 0.93,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 49",
+     "first_line": "# %%time # # #getting scores # tree.get_scores(parameters, skf)"
+    },
+    {
+     "cell": 57,
+     "type": "markdown",
+     "label": "OWN",
+     "similarity": 0.16,
+     "closest_reference": null,
+     "first_line": "Out[2]: | Model Name | Train Accuracy | Validation Accuracy | Accuracy Difference | |---------------"
+    },
+    {
+     "cell": 58,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 50",
+     "first_line": "## 4.6 K Neighbors"
+    },
+    {
+     "cell": 59,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 51",
+     "first_line": "#establishing parameters for GridSearch parameters = {'n_neighbors':[5,10,50,150,300]}"
+    },
+    {
+     "cell": 60,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 52",
+     "first_line": "#fitting the model knn = Classification('KNN', X_train, X_val, y_train, y_val)"
+    },
+    {
+     "cell": 61,
+     "type": "code",
+     "label": "MODIFIED",
+     "similarity": 0.95,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 53",
+     "first_line": "# %%time # #getting scores # knn.get_scores(parameters, skf)"
+    },
+    {
+     "cell": 62,
+     "type": "markdown",
+     "label": "OWN",
+     "similarity": 0.16,
+     "closest_reference": null,
+     "first_line": "Out[3]: | Model Name | Train Accuracy | Validation Accuracy | Accuracy Difference | |------------|--"
+    },
+    {
+     "cell": 63,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.36,
+     "closest_reference": null,
+     "first_line": "print('im gonna win')"
+    },
+    {
+     "cell": 64,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 54",
+     "first_line": "## 4.7 AdaBoost"
+    },
+    {
+     "cell": 65,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 55",
+     "first_line": "#establishing parameters for GridSearch parameters = {'learning_rate':[0.1,1,10]}"
+    },
+    {
+     "cell": 66,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 56",
+     "first_line": "#fitting the model ada = Classification('AdaBoost', X_train, X_val, y_train, y_val)"
+    },
+    {
+     "cell": 67,
+     "type": "code",
+     "label": "MODIFIED",
+     "similarity": 0.95,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 57",
+     "first_line": "# %%time # #getting scores # ada.get_scores(parameters, skf)"
+    },
+    {
+     "cell": 68,
+     "type": "markdown",
+     "label": "OWN",
+     "similarity": 0.17,
+     "closest_reference": null,
+     "first_line": "Out[4]: | Model Name | Train Accuracy | Validation Accuracy | Accuracy Difference | |------------|--"
+    },
+    {
+     "cell": 69,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 58",
+     "first_line": "## 4.8 XGBoost"
+    },
+    {
+     "cell": 70,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 59",
+     "first_line": "#establishing parameters for GridSearch parameters = {'eta':[0.001,0.005,0.1,0.5], 'min_child_weight"
+    },
+    {
+     "cell": 71,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 60",
+     "first_line": "#fitting the model xgb = Classification('XGBoost', X_train, X_val, y_train, y_val)"
+    },
+    {
+     "cell": 72,
+     "type": "code",
+     "label": "MODIFIED",
+     "similarity": 0.95,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 61",
+     "first_line": "# %%time # #getting scores # xgb.get_scores(parameters, skf)"
+    },
+    {
+     "cell": 73,
+     "type": "markdown",
+     "label": "OWN",
+     "similarity": 0.17,
+     "closest_reference": null,
+     "first_line": "Out[5]: | Model Name | Train Accuracy | Validation Accuracy | Accuracy Difference | |------------|--"
+    },
+    {
+     "cell": 74,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 63",
+     "first_line": "# 5. Evaluation"
+    },
+    {
+     "cell": 75,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 64",
+     "first_line": "## 5.1 Comparing scores from all models"
+    },
+    {
+     "cell": 76,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 65",
+     "first_line": "models = pd.concat([log_reg.scores_table, mnb.scores_table, rf.scores_table, tree.scores_table, knn."
+    },
+    {
+     "cell": 77,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 66",
+     "first_line": "models"
+    },
+    {
+     "cell": 78,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 67",
+     "first_line": "#saving models results as a csv models.to_csv('./models_results.csv',index=False)"
+    },
+    {
+     "cell": 79,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 68",
+     "first_line": "#saving all models to a pickle for model in [log_reg, mnb, rf, tree, knn, ada, xgb]: pickle.dump(mod"
+    },
+    {
+     "cell": 80,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 69",
+     "first_line": "## 5.2 Fitting the best model with test data"
+    },
+    {
+     "cell": 81,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 70",
+     "first_line": "## 5.3 Further model metrics and tuning"
+    },
+    {
+     "cell": 82,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.39,
+     "closest_reference": null,
+     "first_line": "print(type(xgb))"
+    },
+    {
+     "cell": 83,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.38,
+     "closest_reference": null,
+     "first_line": "print(dir(xgb))"
+    },
+    {
+     "cell": 84,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 72",
+     "first_line": "log_reg.classification_report"
+    },
+    {
+     "cell": 85,
+     "type": "code",
+     "label": "EMPTY",
+     "similarity": 0.0,
+     "closest_reference": null,
+     "first_line": ""
+    },
+    {
+     "cell": 86,
+     "type": "code",
+     "label": "EMPTY",
+     "similarity": 0.0,
+     "closest_reference": null,
+     "first_line": ""
+    }
+   ]
+  },
+  "Sentiment Analysis.ipynb": {
+   "counts": {
+    "MODIFIED": 4,
+    "IDENTICAL": 23,
+    "OWN": 14,
+    "EMPTY": 2
+   },
+   "cells": [
+    {
+     "cell": 0,
+     "type": "markdown",
+     "label": "MODIFIED",
+     "similarity": 0.92,
+     "closest_reference": "3. Sentiment Analysis.ipynb cell 0",
+     "first_line": "# Sentiment Analysis This stage of the project is dedicated to Sentiment Analysis, or popularly call"
+    },
+    {
+     "cell": 1,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 1",
+     "first_line": "# 1. Imports"
+    },
+    {
+     "cell": 2,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "3. Sentiment Analysis.ipynb cell 2",
+     "first_line": "#basic libraries for linear algebra and data procesing import numpy as np import pandas as pd #visua"
+    },
+    {
+     "cell": 3,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 3",
+     "first_line": "# 2. Data"
+    },
+    {
+     "cell": 4,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "3. Sentiment Analysis.ipynb cell 4",
+     "first_line": "#loading the review dataset review = pd.read_csv('data/review_prepared.csv')"
+    },
+    {
+     "cell": 5,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "1. Data Preprocessing and Basic EDA.ipynb cell 22",
+     "first_line": "review.columns"
+    },
+    {
+     "cell": 6,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 5",
+     "first_line": "#filtering out the stars and text columns reviews = review[['text', 'stars']].reset_index().drop(col"
+    },
+    {
+     "cell": 7,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "4. Modeling and Evaluation.ipynb cell 6",
+     "first_line": "print(reviews.shape) reviews.head()"
+    },
+    {
+     "cell": 8,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "3. Sentiment Analysis.ipynb cell 7",
+     "first_line": "# 3. Sentiment Analysis"
+    },
+    {
+     "cell": 9,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "3. Sentiment Analysis.ipynb cell 8",
+     "first_line": "#number of values per star rating reviews['stars'].value_counts().plot.barh(color = '#8e77ec', figsi"
+    },
+    {
+     "cell": 10,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "3. Sentiment Analysis.ipynb cell 9",
+     "first_line": "## 3.1 Testing VADER with a random review"
+    },
+    {
+     "cell": 11,
+     "type": "code",
+     "label": "MODIFIED",
+     "similarity": 0.77,
+     "closest_reference": "3. Sentiment Analysis.ipynb cell 10",
+     "first_line": "#creating a sid object from the VADER import nltk nltk.download('vader_lexicon') sid = SentimentInte"
+    },
+    {
+     "cell": 12,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "3. Sentiment Analysis.ipynb cell 11",
+     "first_line": "**Test 1**"
+    },
+    {
+     "cell": 13,
+     "type": "code",
+     "label": "MODIFIED",
+     "similarity": 0.89,
+     "closest_reference": "3. Sentiment Analysis.ipynb cell 12",
+     "first_line": "examplerow = 6666 test_sid_scores = sid.polarity_scores(reviews.loc[examplerow]['text']) test_target"
+    },
+    {
+     "cell": 14,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "3. Sentiment Analysis.ipynb cell 13",
+     "first_line": "**Test 2**"
+    },
+    {
+     "cell": 15,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "3. Sentiment Analysis.ipynb cell 14",
+     "first_line": "test2_sid_scores = sid.polarity_scores(reviews.loc[183761]['text']) test2_target_star = reviews.loc["
+    },
+    {
+     "cell": 16,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "3. Sentiment Analysis.ipynb cell 15",
+     "first_line": "**Test 3**"
+    },
+    {
+     "cell": 17,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "3. Sentiment Analysis.ipynb cell 16",
+     "first_line": "test3_sid_scores = sid.polarity_scores(reviews.loc[92701]['text']) test3_target_star = reviews.loc[9"
+    },
+    {
+     "cell": 18,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "3. Sentiment Analysis.ipynb cell 17",
+     "first_line": "## 3.2 Computing polarity scores using compound scores"
+    },
+    {
+     "cell": 19,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "3. Sentiment Analysis.ipynb cell 18",
+     "first_line": "#creating labels from stars reviews['label'] = reviews['stars'].apply(lambda s: 'positive' if s >= 4"
+    },
+    {
+     "cell": 20,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "3. Sentiment Analysis.ipynb cell 19",
+     "first_line": "%%time #creating columns in the dataframe that contain relevant data from the polarity scores review"
+    },
+    {
+     "cell": 21,
+     "type": "markdown",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "3. Sentiment Analysis.ipynb cell 20",
+     "first_line": "## 3.3 Comparison Analysis of compound score and original label"
+    },
+    {
+     "cell": 22,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "3. Sentiment Analysis.ipynb cell 21",
+     "first_line": "print('Accuracy score: ', accuracy_score(reviews.label, reviews.compound_label))"
+    },
+    {
+     "cell": 23,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "3. Sentiment Analysis.ipynb cell 22",
+     "first_line": "print('Classification Report:\\n', classification_report(reviews.label, reviews.compound_label))"
+    },
+    {
+     "cell": 24,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "3. Sentiment Analysis.ipynb cell 23",
+     "first_line": "print(confusion_matrix(reviews.label, reviews.compound_label))"
+    },
+    {
+     "cell": 25,
+     "type": "code",
+     "label": "IDENTICAL",
+     "similarity": 1.0,
+     "closest_reference": "3. Sentiment Analysis.ipynb cell 24",
+     "first_line": "disp = ConfusionMatrixDisplay(confusion_matrix(reviews.label, reviews.compound_label), display_label"
+    },
+    {
+     "cell": 26,
+     "type": "markdown",
+     "label": "OWN",
+     "similarity": 0.13,
+     "closest_reference": null,
+     "first_line": "### F1 Score The F1 score is a measure used to evaluate the performance of a classification model. I"
+    },
+    {
+     "cell": 27,
+     "type": "code",
+     "label": "EMPTY",
+     "similarity": 0.0,
+     "closest_reference": null,
+     "first_line": ""
+    },
+    {
+     "cell": 28,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.3,
+     "closest_reference": null,
+     "first_line": "# \"siebert/sentiment-roberta-large-english\" model for your sentiment analysis task. # This model is "
+    },
+    {
+     "cell": 29,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.38,
+     "closest_reference": null,
+     "first_line": "!pip install transformers"
+    },
+    {
+     "cell": 30,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.37,
+     "closest_reference": null,
+     "first_line": "from transformers import pipeline"
+    },
+    {
+     "cell": 31,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.25,
+     "closest_reference": null,
+     "first_line": "# Importing necessary libraries. # Loads the dataset (make sure the file path is correct). # Applies"
+    },
+    {
+     "cell": 32,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.26,
+     "closest_reference": null,
+     "first_line": "# Installing TextBlob as not already installed !pip install textblob from textblob import TextBlob f"
+    },
+    {
+     "cell": 33,
+     "type": "code",
+     "label": "MODIFIED",
+     "similarity": 0.7,
+     "closest_reference": "3. Sentiment Analysis.ipynb cell 21",
+     "first_line": "# Calculate and print accuracy print('Accuracy score: ', accuracy_score(reviews.label, reviews.textb"
+    },
+    {
+     "cell": 34,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.47,
+     "closest_reference": null,
+     "first_line": "# Create and display confusion matrix cm = confusion_matrix(reviews.label, reviews.textblob_sentimen"
+    },
+    {
+     "cell": 35,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.6,
+     "closest_reference": null,
+     "first_line": "plt.figure(figsize=(10, 8)) disp = ConfusionMatrixDisplay(cm, display_labels=['negative', 'neutral',"
+    },
+    {
+     "cell": 36,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.38,
+     "closest_reference": null,
+     "first_line": "# Display the head of the dataframe with new columns print(\"\\nSample of results:\") print(reviews[['t"
+    },
+    {
+     "cell": 37,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.36,
+     "closest_reference": null,
+     "first_line": "# Analyze discrepancies print(\"\\nAnalyzing discrepancies...\") disagreements = reviews[reviews.label "
+    },
+    {
+     "cell": 38,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.41,
+     "closest_reference": null,
+     "first_line": "# Distribution of sentiments print(\"\\nDistribution of original sentiments:\") print(reviews['label']."
+    },
+    {
+     "cell": 39,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.54,
+     "closest_reference": null,
+     "first_line": "# Visualize polarity distribution plt.figure(figsize=(10, 6)) plt.hist(reviews['textblob_polarity'],"
+    },
+    {
+     "cell": 40,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.29,
+     "closest_reference": null,
+     "first_line": "# Analyze reviews where TextBlob and original sentiment disagree disagreements = reviews[reviews.lab"
+    },
+    {
+     "cell": 41,
+     "type": "code",
+     "label": "OWN",
+     "similarity": 0.36,
+     "closest_reference": null,
+     "first_line": "# Average polarity for each original sentiment category print(\"\\nAverage TextBlob polarity for each "
+    },
+    {
+     "cell": 42,
+     "type": "code",
+     "label": "EMPTY",
+     "similarity": 0.0,
+     "closest_reference": null,
+     "first_line": ""
+    }
+   ]
+  }
+ }
+}

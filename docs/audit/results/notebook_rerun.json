@@ -1,0 +1,165 @@
+{
+ " Business Case Data Analysis.ipynb": {
+  "stats": {
+   "code_cells": 36,
+   "with_saved_text_output": 8,
+   "identical": 8,
+   "different": 0,
+   "saved_images": 12,
+   "rerun_images": 12,
+   "rerun_errors": 0,
+   "never_executed_in_original": 2
+  },
+  "differences": [],
+  "run": {
+   "status": "completed",
+   "seconds": 262.2,
+   "errors": [],
+   "n_code_cells": 36
+  },
+  "patches_applied": []
+ },
+ "Data preprocessing and EDA.ipynb": {
+  "stats": {
+   "code_cells": 51,
+   "with_saved_text_output": 38,
+   "identical": 33,
+   "different": 5,
+   "saved_images": 4,
+   "rerun_images": 3,
+   "rerun_errors": 0,
+   "never_executed_in_original": 1
+  },
+  "differences": [
+   {
+    "cell": 1,
+    "source_first_line": "!pip install pandas numpy matplotlib seaborn scikit-learn nltk vaderSentiment",
+    "saved": "   ---------------------------------------- 0.0/126.0 kB ? eta -:--:--\n   ------ -------------------------------- 20.5/126.0 kB 330.3 kB/s eta 0:00:01\n   ---------------------- ---------------- 71.7/126.0 kB 787.7 kB/s eta 0:00:01\n   -------------------------------------- 126.0/126.0 kB 925.7 kB/s eta 0:00:00\nInstalling collected packages: vaderSentiment",
+    "rerun": ""
+   },
+   {
+    "cell": 15,
+    "source_first_line": "review.info()",
+    "saved": "<class 'pandas.core.frame.DataFrame'>\nRangeIndex: 229130 entries, 0 to 229129\nData columns (total 27 columns):\n #   Column                  Non-Null Count   Dtype\n---  ------                  --------------   -----\n 0   Unnamed: 0              229130 non-null  int64\n 1   business_categories     229130 non-null  object\n 2   business_city           229130 non-null  object\n 3   business_full_address   229130 non-null  object\n 4   business_id             229130 non-null  object\n 5   business_latitude       229130 non-null  float64\n 6   business_longitude      229130 non-null  float64\n 7   business",
+    "rerun": "<class 'pandas.core.frame.DataFrame'>\nRangeIndex: 229130 entries, 0 to 229129\nData columns (total 28 columns):\n #   Column                  Non-Null Count   Dtype\n---  ------                  --------------   -----\n 0   Unnamed: 0              229130 non-null  int64\n 1   business_categories     229130 non-null  object\n 2   business_city           229130 non-null  object\n 3   business_full_address   229130 non-null  object\n 4   business_id             229130 non-null  object\n 5   business_latitude       229130 non-null  float64\n 6   business_longitude      229130 non-null  float64\n 7   business"
+   },
+   {
+    "cell": 16,
+    "source_first_line": "review.head()",
+    "saved": "   Unnamed: 0              business_categories business_city  \\\n0           0  Breakfast & Brunch; Restaurants       Phoenix\n1           1      Italian; Pizza; Restaurants       Phoenix\n2           2      Middle Eastern; Restaurants         Tempe\n3           3    Active Life; Dog Parks; Parks    Scottsdale\n4           4                Tires; Automotive          Mesa\n                     business_full_address             business_id  \\\n0        6106 S 32nd St\\nPhoenix, AZ 85042  9yKzy9PApeiPPOUJEtnvkg\n1  4848 E Chandler Blvd\\nPhoenix, AZ 85044  ZRJwVLyzEJq1VAihDhYiow\n2     1513 E  Apache Blvd\\n",
+    "rerun": "   Unnamed: 0              business_categories business_city  \\\n0           0  Breakfast & Brunch; Restaurants       Phoenix\n1           1      Italian; Pizza; Restaurants       Phoenix\n2           2      Middle Eastern; Restaurants         Tempe\n3           3    Active Life; Dog Parks; Parks    Scottsdale\n4           4                Tires; Automotive          Mesa\n                     business_full_address             business_id  \\\n0        6106 S 32nd St\\nPhoenix, AZ 85042  9yKzy9PApeiPPOUJEtnvkg\n1  4848 E Chandler Blvd\\nPhoenix, AZ 85044  ZRJwVLyzEJq1VAihDhYiow\n2     1513 E  Apache Blvd\\n"
+   },
+   {
+    "cell": 17,
+    "source_first_line": "review.columns",
+    "saved": "Index(['Unnamed: 0', 'business_categories', 'business_city',\n       'business_full_address', 'business_id', 'business_latitude',\n       'business_longitude', 'business_name', 'business_open',\n       'business_review_count', 'business_stars', 'business_state', 'cool',\n       'date', 'funny', 'review_id', 'reviewer_average_stars',\n       'reviewer_blank', 'reviewer_cool', 'reviewer_funny', 'reviewer_name',\n       'reviewer_review_count', 'reviewer_useful', 'stars', 'text', 'useful',\n       'user_id'],\n      dtype='object')",
+    "rerun": "Index(['Unnamed: 0', 'business_categories', 'business_city',\n       'business_full_address', 'business_id', 'business_latitude',\n       'business_longitude', 'business_name', 'business_open',\n       'business_review_count', 'business_stars', 'business_state', 'cool',\n       'date', 'funny', 'review_id', 'reviewer_average_stars',\n       'reviewer_blank', 'reviewer_cool', 'reviewer_funny', 'reviewer_name',\n       'reviewer_review_count', 'reviewer_useful', 'stars', 'text', 'useful',\n       'user_id', 'review_length'],\n      dtype='object')"
+   },
+   {
+    "cell": 24,
+    "source_first_line": "correlation = review['reviewer_cool'].corr(review['stars'])",
+    "saved": "Correlation between 'cool' votes and star rating: -0.004295222041795148",
+    "rerun": "Correlation between 'cool' votes and star rating: -0.004295222041795143"
+   }
+  ],
+  "run": {
+   "status": "completed",
+   "seconds": 14.4,
+   "errors": [],
+   "n_code_cells": 51
+  },
+  "patches_applied": [
+   {
+    "cell": 1,
+    "before": "!pip install pandas numpy matplotlib seaborn scikit-learn nltk vaderSentiment",
+    "after": "pass  # [audit] removed: pip install"
+   },
+   {
+    "cell": 3,
+    "before": "# Load the prepared datasets\nbusiness = pd.read_csv('C:/Users/besid/OneDrive/Desktop/on campus internship/machine learning/yelpproject/data/business_prepared.csv')\nreview = pd.read_csv('C:/Users/besid/OneDrive/Desktop/on campus internship/machine learning/yelpproject/data/review_prepared.csv')\nuser = pd.read_csv('C:/Users/besid/OneDrive/Desktop/on campus internship/machine learning/yelpproject/data/user_prepared.csv')\n",
+    "after": "# Load the prepared datasets\nbusiness = pd.read_csv('data/business_prepared.csv')\nreview = pd.read_csv('data/review_prepared.csv')\nuser = pd.read_csv('data/user_prepared.csv')\n"
+   },
+   {
+    "cell": 64,
+    "before": "# Set the base path\nbase_path = 'C:/Users/besid/OneDrive/Desktop/on campus internship/machine learning/yelpproject/data/'\n\n# Business dataset\nbusiness.to_csv(base_path + 'business_prepared.csv', index=False)\n\n# Review dataset\nreview.to_csv(base_path + 'review_prepared.csv', index=False)\n\n# User dataset\nuser.to_csv(base_path + 'user_prepared.csv', index=False)",
+    "after": "# Set the base path\nbase_path = 'out/'\n\n# Business dataset\nbusiness.to_csv(base_path + 'business_prepared.csv', index=False)\n\n# Review dataset\nreview.to_csv(base_path + 'review_prepared.csv', index=False)\n\n# User dataset\nuser.to_csv(base_path + 'user_prepared.csv', index=False)"
+   }
+  ]
+ },
+ "Modeling and Evaluation.ipynb": {
+  "stats": {
+   "code_cells": 58,
+   "with_saved_text_output": 19,
+   "identical": 18,
+   "different": 1,
+   "saved_images": 0,
+   "rerun_images": 0,
+   "rerun_errors": 0,
+   "never_executed_in_original": 1
+  },
+  "differences": [
+   {
+    "cell": 21,
+    "source_first_line": "print(type(stopwords))",
+    "saved": "<class 'nltk.corpus.reader.wordlist.WordListCorpusReader'>",
+    "rerun": "<class 'nltk.corpus.util.LazyCorpusLoader'>"
+   }
+  ],
+  "run": {
+   "status": "completed",
+   "seconds": 68.7,
+   "errors": [],
+   "n_code_cells": 58
+  },
+  "patches_applied": [
+   {
+    "cell": 2,
+    "before": "#basic libraries for linear algebra and data processing\nimport numpy as np\nimport pandas as pd\n\n#visualization\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\n!pip install xgboost\n!pip install yellowbrick\n#data preparation tools\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.feature_extraction.text import TfidfVectorizer\nfrom sklearn.preprocessing import StandardScaler\nimport nltk\nfrom nltk.corpus import stopwords\n\nimport pickle\n\n#classification class\nfrom Classification_py import Classification\n\n#time and warnings\nimport time\nimport warnings\n\n#settings\nwarnings.filterwarnings(\"ignore\")\n%matplotlib inline\nsns.set_context('poster', font_scale=0.5)",
+    "after": "#basic libraries for linear algebra and data processing\nimport numpy as np\nimport pandas as pd\n\n#visualization\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\npass  # [audit] removed: pip install\npass  # [audit] removed: pip install\n#data preparation tools\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.feature_extraction.text import TfidfVectorizer\nfrom sklearn.preprocessing import StandardScaler\nimport nltk\nfrom nltk.corpus import stopwords\n\nimport pickle\n\n#classification class\nfrom Classification_py import Classification\n\n#time and warnings\nimport time\nimport warnings\n\n#settings\nwarnings.filterwarnings(\"ignore\")\n%matplotlib inline\nsns.set_context('poster', font_scale=0.5)"
+   },
+   {
+    "cell": 4,
+    "before": "#loading the review dataset\nfile_path = r\"C:\\Users\\besid\\OneDrive\\Desktop\\on campus internship\\machine learning\\yelpproject\\data\\review_prepared.csv\"\nreview = pd.read_csv(file_path)",
+    "after": "#loading the review dataset\nfile_path = \"data/review_prepared.csv\"\nreview = pd.read_csv(file_path)"
+   }
+  ]
+ },
+ "Sentiment Analysis.ipynb": {
+  "stats": {
+   "code_cells": 32,
+   "with_saved_text_output": 16,
+   "identical": 15,
+   "different": 1,
+   "saved_images": 3,
+   "rerun_images": 4,
+   "rerun_errors": 0,
+   "never_executed_in_original": 3
+  },
+  "differences": [
+   {
+    "cell": 37,
+    "source_first_line": "# Analyze discrepancies",
+    "saved": "Analyzing discrepancies...\nSample of disagreements:\n                                                     text     label  \\\n156752  Moving from San Diego with one of the best pho...  negative\n127710  I've been to plenty of dumps in my day, but th...  positive\n213284  Dr's here are terrific if you ever can get an ...  negative\n212646  This is close to my house when I need to pick ...  negative\n228721  You know, we get a lot of crap living way out ...  positive\n       textblob_sentiment  textblob_polarity\n156752            neutral           0.068739\n127710            neutral          -0.007143\n21",
+    "rerun": "Analyzing discrepancies...\nSample of disagreements:\n                                                     text     label  \\\n115520  This used to be my favorite place to get some ...  negative\n64636   If you look at Med Fresh Grill from the outsid...  positive\n136316  I'm sticking with my three stars but I am star...   neutral\n191060  they messed up our order and the food took a h...  negative\n83949   This place is flat out terrible and cannot hol...  negative\n       textblob_sentiment  textblob_polarity\n115520            neutral          -0.061111\n64636             neutral           0.014339\n13"
+   }
+  ],
+  "run": {
+   "status": "completed",
+   "seconds": 442.5,
+   "errors": [],
+   "n_code_cells": 32
+  },
+  "patches_applied": [
+   {
+    "cell": 29,
+    "before": "!pip install transformers",
+    "after": "pass  # [audit] removed: pip install"
+   },
+   {
+    "cell": 32,
+    "before": "# Installing TextBlob as not already installed\n!pip install textblob\n\nfrom textblob import TextBlob\nfrom sklearn.metrics import accuracy_score, confusion_matrix, ConfusionMatrixDisplay\nfrom tqdm import tqdm\n\n# Assuming 'reviews' is your DataFrame and it has 'text' and 'label' columns\n\nprint(\"Applying TextBlob sentiment analysis...\")\n\ndef get_textblob_sentiment(text):\n    analysis = TextBlob(str(text))\n    polarity = analysis.sentiment.polarity\n    if polarity > 0.1:\n        return 'positive'\n    elif polarity < -0.1:\n        return 'negative'\n    else:\n        return 'neutral'\n\n    \n    # Apply sentiment analysis with progress bar\ntqdm.pandas()\nreviews['textblob_sentiment'] = reviews['text'].progress_apply(get_textblob_sentiment)\nreviews['textblob_polarity'] = reviews['text'].progress_apply(lambda x: TextBlob(str(x)).sentiment.polarity)",
+    "after": "# Installing TextBlob as not already installed\npass  # [audit] removed: pip install\n\nfrom textblob import TextBlob\nfrom sklearn.metrics import accuracy_score, confusion_matrix, ConfusionMatrixDisplay\nfrom tqdm import tqdm\n\n# Assuming 'reviews' is your DataFrame and it has 'text' and 'label' columns\n\nprint(\"Applying TextBlob sentiment analysis...\")\n\ndef get_textblob_sentiment(text):\n    analysis = TextBlob(str(text))\n    polarity = analysis.sentiment.polarity\n    if polarity > 0.1:\n        return 'positive'\n    elif polarity < -0.1:\n        return 'negative'\n    else:\n        return 'neutral'\n\n    \n    # Apply sentiment analysis with progress bar\ntqdm.pandas()\nreviews['textblob_sentiment'] = reviews['text'].progress_apply(get_textblob_sentiment)\nreviews['textblob_polarity'] = reviews['text'].progress_apply(lambda x: TextBlob(str(x)).sentiment.polarity)"
+   }
+  ]
+ }
+}

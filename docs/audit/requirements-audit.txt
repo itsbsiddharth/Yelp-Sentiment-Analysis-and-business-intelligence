@@ -1,0 +1,28 @@
+# Reconstructed environment of the ORIGINAL notebooks (Python 3.11).
+# The repo had no requirements file; these versions are the ones printed by the notebooks'
+# own `!pip install` cells (see results/inventory.json -> library_versions_printed_by_pip_cells).
+# spaCy's version was never printed; 3.7.5 + en_core_web_sm 3.7.1 is an assumption.
+pandas==2.0.3
+numpy==1.24.3
+scipy==1.11.1
+scikit-learn==1.3.0
+matplotlib==3.7.2
+seaborn==0.12.2
+nltk==3.8.1
+vaderSentiment==3.3.2
+joblib==1.2.0
+threadpoolctl==2.2.0
+yellowbrick==1.5
+textblob==0.18.0.post0
+tqdm==4.65.0
+transformers==4.32.1   # only imported by "Sentiment Analysis.ipynb", never used
+spacy==3.7.5
+en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl
+# xgboost==2.1.0 is installed separately with --no-deps (its Linux wheel otherwise pulls ~200 MB of
+# NVIDIA GPU libraries that CPU training does not need):
+#   pip install --no-deps xgboost==2.1.0
+# Notebook execution tooling (not used by the original code):
+ipykernel
+nbclient
+nbformat
+ipywidgets

@@ -1,0 +1,620 @@
+{
+ "environment": {
+  "python": "3.11.17",
+  "pandas": "2.0.3",
+  "numpy": "1.24.3",
+  "scikit-learn": "1.3.0",
+  "xgboost": "2.1.0",
+  "nltk": "3.8.1",
+  "vaderSentiment": "unknown",
+  "textblob": "unknown",
+  "spacy": "3.7.5",
+  "scipy": "1.11.1"
+ },
+ "features": {
+  "X_train_full_shape": [
+   153513,
+   1095
+  ],
+  "matches_stored_153513x1095": true,
+  "train_rows": 107459,
+  "val_rows": 46054,
+  "test_rows": 75611
+ },
+ "baselines": {
+  "majority_val": {
+   "n": 46054,
+   "accuracy": 0.6793980978850914,
+   "macro_f1": 0.26969904623990965,
+   "weighted_f1": 0.5496990570504537,
+   "per_class": {
+    "negative": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1-score": 0.0,
+     "support": 7619.0
+    },
+    "neutral": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1-score": 0.0,
+     "support": 7146.0
+    },
+    "positive": {
+     "precision": 0.6793980978850914,
+     "recall": 1.0,
+     "f1-score": 0.809097138719729,
+     "support": 31289.0
+    }
+   },
+   "confusion_matrix": {
+    "labels": [
+     "negative",
+     "neutral",
+     "positive"
+    ],
+    "rows_true_cols_pred": [
+     [
+      0,
+      0,
+      7619
+     ],
+     [
+      0,
+      0,
+      7146
+     ],
+     [
+      0,
+      0,
+      31289
+     ]
+    ]
+   },
+   "predicted_class": "positive"
+  },
+  "majority_test": {
+   "n": 75611,
+   "accuracy": 0.6785917392971922,
+   "macro_f1": 0.2695083517176174,
+   "weighted_f1": 0.5486584234415322,
+   "per_class": {
+    "negative": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1-score": 0.0,
+     "support": 12629.0
+    },
+    "neutral": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1-score": 0.0,
+     "support": 11673.0
+    },
+    "positive": {
+     "precision": 0.6785917392971922,
+     "recall": 1.0,
+     "f1-score": 0.8085250551528521,
+     "support": 51309.0
+    }
+   },
+   "confusion_matrix": {
+    "labels": [
+     "negative",
+     "neutral",
+     "positive"
+    ],
+    "rows_true_cols_pred": [
+     [
+      0,
+      0,
+      12629
+     ],
+     [
+      0,
+      0,
+      11673
+     ],
+     [
+      0,
+      0,
+      51309
+     ]
+    ]
+   },
+   "predicted_class": "positive"
+  },
+  "majority_all": {
+   "n": 229124,
+   "accuracy": 0.6791649936279045,
+   "macro_f1": 0.2696439385866189,
+   "weighted_f1": 0.5493981714959524,
+   "per_class": {
+    "negative": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1-score": 0.0,
+     "support": 38245.0
+    },
+    "neutral": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1-score": 0.0,
+     "support": 35266.0
+    },
+    "positive": {
+     "precision": 0.6791649936279045,
+     "recall": 1.0,
+     "f1-score": 0.8089318157598567,
+     "support": 155613.0
+    }
+   },
+   "confusion_matrix": {
+    "labels": [
+     "negative",
+     "neutral",
+     "positive"
+    ],
+    "rows_true_cols_pred": [
+     [
+      0,
+      0,
+      38245
+     ],
+     [
+      0,
+      0,
+      35266
+     ],
+     [
+      0,
+      0,
+      155613
+     ]
+    ]
+   },
+   "predicted_class": "positive"
+  }
+ },
+ "reproduce_logreg_val": {
+  "n": 46054,
+  "accuracy": 0.788682850566726,
+  "macro_f1": 0.6409158829211491,
+  "weighted_f1": 0.7687243071096563,
+  "per_class": {
+   "negative": {
+    "precision": 0.6945415434256521,
+    "recall": 0.678041737760861,
+    "f1-score": 0.6861924686192469,
+    "support": 7619.0
+   },
+   "neutral": {
+    "precision": 0.5122601279317697,
+    "recall": 0.2689616568709768,
+    "f1-score": 0.35272527069187004,
+    "support": 7146.0
+   },
+   "positive": {
+    "precision": 0.838515374024782,
+    "recall": 0.9343219661861997,
+    "f1-score": 0.8838299094523303,
+    "support": 31289.0
+   }
+  },
+  "confusion_matrix": {
+   "labels": [
+    "negative",
+    "neutral",
+    "positive"
+   ],
+   "rows_true_cols_pred": [
+    [
+     5166,
+     730,
+     1723
+    ],
+    [
+     1317,
+     1922,
+     3907
+    ],
+    [
+     955,
+     1100,
+     29234
+    ]
+   ]
+  },
+  "train_accuracy": 0.801328878921263,
+  "fit_seconds": 3.5
+ },
+ "reproduce_mnb_val": {
+  "n": 46054,
+  "accuracy": 0.6876709949190081,
+  "macro_f1": 0.6079533860846849,
+  "weighted_f1": 0.7105676715197247,
+  "per_class": {
+   "negative": {
+    "precision": 0.5268618387262455,
+    "recall": 0.6731854574091088,
+    "f1-score": 0.591102915754293,
+    "support": 7619.0
+   },
+   "neutral": {
+    "precision": 0.34682230869001296,
+    "recall": 0.5612930310663308,
+    "f1-score": 0.4287317620650954,
+    "support": 7146.0
+   },
+   "positive": {
+    "precision": 0.9101559343944413,
+    "recall": 0.7200613634184537,
+    "f1-score": 0.8040254804346663,
+    "support": 31289.0
+   }
+  },
+  "confusion_matrix": {
+   "labels": [
+    "negative",
+    "neutral",
+    "positive"
+   ],
+   "rows_true_cols_pred": [
+    [
+     5129,
+     1879,
+     611
+    ],
+    [
+     1522,
+     4011,
+     1613
+    ],
+    [
+     3084,
+     5675,
+     22530
+    ]
+   ]
+  },
+  "train_accuracy": 0.6965447286872203,
+  "fit_seconds": 0.9
+ },
+ "logreg_grid_search": {
+  "best_params": {
+   "C": 0.01,
+   "penalty": "l2"
+  },
+  "mean_cv_accuracy_by_params": {
+   "l1, C=0.01": null,
+   "l2, C=0.01": 0.7923766364727161,
+   "l1, C=0.05": null,
+   "l2, C=0.05": 0.7922184359082685,
+   "l1, C=0.5": null,
+   "l2, C=0.5": 0.7922556607931039,
+   "l1, C=5": null,
+   "l2, C=5": 0.7922370500827206
+  },
+  "n_param_combinations_that_failed": 4,
+  "why": "solver='lbfgs' does not support penalty='l1', so every l1 fit raises and scores NaN"
+ },
+ "leakage_refit_train_only_logreg_val": {
+  "n": 46054,
+  "accuracy": 0.7888348460502888,
+  "macro_f1": 0.6410768368709172,
+  "weighted_f1": 0.7688815715572861,
+  "per_class": {
+   "negative": {
+    "precision": 0.6952956989247312,
+    "recall": 0.6789604935030844,
+    "f1-score": 0.6870310113553357,
+    "support": 7619.0
+   },
+   "neutral": {
+    "precision": 0.5111821086261981,
+    "recall": 0.2686817800167926,
+    "f1-score": 0.35222894881673084,
+    "support": 7146.0
+   },
+   "positive": {
+    "precision": 0.838717080727523,
+    "recall": 0.9343858864137556,
+    "f1-score": 0.883970550440685,
+    "support": 31289.0
+   }
+  },
+  "confusion_matrix": {
+   "labels": [
+    "negative",
+    "neutral",
+    "positive"
+   ],
+   "rows_true_cols_pred": [
+    [
+     5173,
+     732,
+     1714
+    ],
+    [
+     1318,
+     1920,
+     3908
+    ],
+    [
+     949,
+     1104,
+     29236
+    ]
+   ]
+  },
+  "train_accuracy": 0.8010403968025014,
+  "fit_seconds": 3.8,
+  "n_features": 1095
+ },
+ "leakage_effect_val_accuracy": -0.00015199548356270576,
+ "leakage_effect_val_macro_f1": -0.00016095394976811672,
+ "test_vectorizer_bug": {
+  "train_vocab_size": 1095,
+  "test_refit_vocab_size": 1082,
+  "terms_in_both": 1073,
+  "same_number_of_columns": false,
+  "columns_with_same_term_at_same_position": null,
+  "first_mismatched_column": null,
+  "lr_on_buggy_test_features": "would crash: model expects 1095 features, buggy test matrix has 1082"
+ },
+ "original_logreg_on_test_correct_transform": {
+  "n": 75611,
+  "accuracy": 0.7935750089272725,
+  "macro_f1": 0.6479951450529882,
+  "weighted_f1": 0.7737745714093299,
+  "per_class": {
+   "negative": {
+    "precision": 0.7075240737718296,
+    "recall": 0.6865151635125505,
+    "f1-score": 0.6968613109351767,
+    "support": 12629.0
+   },
+   "neutral": {
+    "precision": 0.5238562091503268,
+    "recall": 0.27465090379508267,
+    "f1-score": 0.36036643623897036,
+    "support": 11673.0
+   },
+   "positive": {
+    "precision": 0.8408372206789314,
+    "recall": 0.9379835896236528,
+    "f1-score": 0.8867576879848175,
+    "support": 51309.0
+   }
+  },
+  "confusion_matrix": {
+   "labels": [
+    "negative",
+    "neutral",
+    "positive"
+   ],
+   "rows_true_cols_pred": [
+    [
+     8670,
+     1245,
+     2714
+    ],
+    [
+     2071,
+     3206,
+     6396
+    ],
+    [
+     1513,
+     1669,
+     48127
+    ]
+   ]
+  }
+ },
+ "stopwords_and_vocabulary": {
+  "nltk_stopword_count": 198,
+  "negation_words_in_nltk_stoplist": [
+   "ain",
+   "aren",
+   "aren't",
+   "couldn",
+   "couldn't",
+   "didn",
+   "didn't",
+   "doesn",
+   "doesn't",
+   "don",
+   "don't",
+   "hadn",
+   "hadn't",
+   "hasn",
+   "hasn't",
+   "haven",
+   "haven't",
+   "isn",
+   "isn't",
+   "mightn",
+   "mightn't",
+   "mustn",
+   "mustn't",
+   "needn",
+   "needn't",
+   "no",
+   "nor",
+   "not",
+   "shan",
+   "shan't",
+   "shouldn",
+   "shouldn't",
+   "wasn",
+   "wasn't",
+   "weren",
+   "weren't",
+   "won",
+   "won't",
+   "wouldn",
+   "wouldn't"
+  ],
+  "n_negation_words_removed": 40,
+  "share_of_reviews_with_not_nt_no_never": 0.6986509285858526,
+  "min_df_rule": "min_df=0.01 keeps only terms in >= 1% of the 153,513 training documents",
+  "probe_terms": {
+   "terrible": {
+    "in_vocabulary": true,
+    "document_share": 0.013666595011497895
+   },
+   "horrible": {
+    "in_vocabulary": true,
+    "document_share": 0.014344062066405363
+   },
+   "awful": {
+    "in_vocabulary": false,
+    "document_share": 0.009243516835707788
+   },
+   "worst": {
+    "in_vocabulary": true,
+    "document_share": 0.014969416270935334
+   },
+   "disgusting": {
+    "in_vocabulary": false,
+    "document_share": 0.004950720785861806
+   },
+   "rude": {
+    "in_vocabulary": true,
+    "document_share": 0.013334375590341348
+   },
+   "mediocre": {
+    "in_vocabulary": true,
+    "document_share": 0.012598281578759194
+   },
+   "bland": {
+    "in_vocabulary": true,
+    "document_share": 0.019887566525310534
+   },
+   "amazing": {
+    "in_vocabulary": true,
+    "document_share": 0.09021385810975431
+   },
+   "excellent": {
+    "in_vocabulary": true,
+    "document_share": 0.05998840489078424
+   },
+   "delicious": {
+    "in_vocabulary": true,
+    "document_share": 0.11098734309150088
+   },
+   "great": {
+    "in_vocabulary": true,
+    "document_share": 0.35157283096565795
+   },
+   "bad": {
+    "in_vocabulary": true,
+    "document_share": 0.0876538143349577
+   },
+   "ok": {
+    "in_vocabulary": true,
+    "document_share": 0.060066574166350466
+   },
+   "okay": {
+    "in_vocabulary": true,
+    "document_share": 0.030720525297529958
+   },
+   "not good": {
+    "in_vocabulary": false,
+    "document_share": 0.009113234709764044
+   },
+   "never": {
+    "in_vocabulary": true,
+    "document_share": 0.12782630786973723
+   },
+   "not": {
+    "in_vocabulary": false,
+    "document_share": 0.43086904692155
+   }
+  },
+  "note": "'not good' can never be a feature: 'not' is removed as a stop word before bigrams are built"
+ },
+ "scaling_ablation_val": {
+  "mnb_raw_counts": {
+   "best_params_by_cv_macro_f1_on_train": {
+    "alpha": 0.01
+   },
+   "cv_macro_f1": 0.6250372712187319,
+   "val_accuracy": 0.7418031007078647,
+   "val_macro_f1": 0.6219329188477106,
+   "val_per_class_f1": {
+    "negative": 0.5934252663224625,
+    "neutral": 0.4181743421052631,
+    "positive": 0.8541991481154063
+   }
+  },
+  "mnb_raw_tfidf_uniform_prior": {
+   "best_params_by_cv_macro_f1_on_train": {
+    "alpha": 0.001
+   },
+   "cv_macro_f1": 0.6086938107016234,
+   "val_accuracy": 0.676293047292309,
+   "val_macro_f1": 0.6058736099421719,
+   "val_per_class_f1": {
+    "negative": 0.5953116066323614,
+    "neutral": 0.4309920056312534,
+    "positive": 0.7913172175629009
+   }
+  },
+  "logreg_scaled (original)": {
+   "best_params_by_cv_macro_f1_on_train": {
+    "C": 0.1
+   },
+   "cv_macro_f1": 0.6471527932506104,
+   "val_accuracy": 0.788726277847744,
+   "val_macro_f1": 0.6413768391229785,
+   "val_per_class_f1": {
+    "negative": 0.6867453894122331,
+    "neutral": 0.35354460523905473,
+    "positive": 0.8838405227176477
+   }
+  },
+  "logreg_raw_tfidf": {
+   "best_params_by_cv_macro_f1_on_train": {
+    "C": 30
+   },
+   "cv_macro_f1": 0.6470776533118021,
+   "val_accuracy": 0.7887479914882529,
+   "val_macro_f1": 0.6413151952935238,
+   "val_per_class_f1": {
+    "negative": 0.6868445506438339,
+    "neutral": 0.35324294613411505,
+    "positive": 0.8838580891026222
+   }
+  },
+  "mnb_scaled (original)": {
+   "best_params_by_cv_macro_f1_on_train": {
+    "alpha": 10.0
+   },
+   "cv_macro_f1": 0.6107530170121237,
+   "val_accuracy": 0.6876709949190081,
+   "val_macro_f1": 0.6080208853714919,
+   "val_per_class_f1": {
+    "negative": 0.5911001093776986,
+    "neutral": 0.42902208201892744,
+    "positive": 0.8039404647178497
+   }
+  },
+  "mnb_raw_tfidf": {
+   "best_params_by_cv_macro_f1_on_train": {
+    "alpha": 0.001
+   },
+   "cv_macro_f1": 0.4368960884080339,
+   "val_accuracy": 0.727472097971946,
+   "val_macro_f1": 0.43476916510994656,
+   "val_per_class_f1": {
+    "negative": 0.4491815759421393,
+    "neutral": 0.0189716799560077,
+    "positive": 0.8361542394316928
+   }
+  },
+  "note": "Diagnostic only: regulariser chosen by 5-fold CV (macro-F1) on the train part, validation used once per variant. Grids differ because scaled features need much stronger regularisation than raw TF-IDF."
+ },
+ "seconds": 244
+}

@@ -1,0 +1,677 @@
+{
+ "environment": {
+  "python": "3.11.17",
+  "pandas": "2.0.3",
+  "numpy": "1.24.3",
+  "scikit-learn": "1.3.0",
+  "xgboost": "2.1.0",
+  "nltk": "3.8.1",
+  "vaderSentiment": "unknown",
+  "textblob": "unknown",
+  "spacy": "3.7.5",
+  "scipy": "1.11.1"
+ },
+ "top_rated": {
+  "n_businesses_meeting_filter": 42,
+  "top_30": {
+   "slice": "[:30]",
+   "rows": 30,
+   "unique_names (bars drawn)": 29,
+   "names_appearing_more_than_once": {
+    "Lo-Lo's Chicken & Waffles": 2
+   },
+   "value_labels_not_matching_their_bar": 4,
+   "value_labels_drawn_below_the_last_bar": 1
+  },
+  "top_50": {
+   "slice": "[:50]",
+   "rows": 42,
+   "unique_names (bars drawn)": 40,
+   "names_appearing_more_than_once": {
+    "Cornish Pasty Company": 2,
+    "Lo-Lo's Chicken & Waffles": 2
+   },
+   "value_labels_not_matching_their_bar": 16,
+   "value_labels_drawn_below_the_last_bar": 2
+  },
+  "top3": [
+   {
+    "name": "Pizzeria Bianco",
+    "business_stars": 4.0,
+    "business_review_count (plotted, labelled 'Number of Positive Reviews')": 803,
+    "reviews_in_this_dataset": 794,
+    "positive_4_5_star_reviews_in_this_dataset": 567
+   },
+   {
+    "name": "Four Peaks Brewing Co",
+    "business_stars": 4.5,
+    "business_review_count (plotted, labelled 'Number of Positive Reviews')": 735,
+    "reviews_in_this_dataset": 731,
+    "positive_4_5_star_reviews_in_this_dataset": 647
+   },
+   {
+    "name": "Matt's Big Breakfast",
+    "business_stars": 4.0,
+    "business_review_count (plotted, labelled 'Number of Positive Reviews')": 689,
+    "reviews_in_this_dataset": 679,
+    "positive_4_5_star_reviews_in_this_dataset": 509
+   }
+  ],
+  "n_businesses_with_5_star_average": 1252,
+  "median_review_count_of_5_star_businesses": 4.0
+ },
+ "category_base_rates": {
+  "share_of_businesses_tagged_restaurants": 0.39639084507042255,
+  "share_of_reviews_for_restaurants": 0.6914415397372671,
+  "top10_categories_all_businesses": {
+   "Restaurants": 4503,
+   "Shopping": 1681,
+   "Food": 1616,
+   "Beauty & Spas": 764,
+   "Nightlife": 640,
+   "Mexican": 630,
+   "Automotive": 563,
+   "Active Life": 525,
+   "Bars": 517,
+   "American (Traditional)": 480
+  },
+  "restaurants_share_of_category_tags_in_top30": 0.29591836734693877,
+  "restaurants_share_of_category_tags_all_businesses": 0.1457706127998446
+ },
+ "reviews_over_time": {
+  "reviews_per_year": {
+   "2005": 101,
+   "2006": 1214,
+   "2007": 6652,
+   "2008": 16952,
+   "2009": 26597,
+   "2010": 42478,
+   "2011": 63585,
+   "2012": 70106,
+   "2013": 1445
+  },
+  "Pizzeria Bianco": {
+   "n_business_ids_with_this_name": 1,
+   "years_present": [
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013
+   ],
+   "years_dropped_by_positional_drop": [
+    2005,
+    2013
+   ],
+   "full_years_dropped_by_mistake": [],
+   "counts_plotted": {
+    "2006": 10,
+    "2007": 30,
+    "2008": 82,
+    "2009": 112,
+    "2010": 164,
+    "2011": 197,
+    "2012": 192
+   },
+   "per_1000_reviews_that_year": {
+    "2006": 8.237,
+    "2007": 4.51,
+    "2008": 4.837,
+    "2009": 4.211,
+    "2010": 3.861,
+    "2011": 3.098,
+    "2012": 2.739
+   }
+  },
+  "Postino Arcadia": {
+   "n_business_ids_with_this_name": 1,
+   "years_present": [
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013
+   ],
+   "years_dropped_by_positional_drop": [
+    2006,
+    2013
+   ],
+   "full_years_dropped_by_mistake": [
+    2006
+   ],
+   "counts_plotted": {
+    "2007": 22,
+    "2008": 47,
+    "2009": 69,
+    "2010": 155,
+    "2011": 140,
+    "2012": 127
+   },
+   "per_1000_reviews_that_year": {
+    "2007": 3.307,
+    "2008": 2.773,
+    "2009": 2.594,
+    "2010": 3.649,
+    "2011": 2.202,
+    "2012": 1.812
+   }
+  },
+  "Phoenix Sky Harbor International Airport": {
+   "n_business_ids_with_this_name": 1,
+   "years_present": [
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013
+   ],
+   "years_dropped_by_positional_drop": [
+    2013
+   ],
+   "full_years_dropped_by_mistake": [],
+   "counts_plotted": {
+    "2006": 8,
+    "2007": 37,
+    "2008": 57,
+    "2009": 55,
+    "2010": 130,
+    "2011": 264,
+    "2012": 287
+   },
+   "per_1000_reviews_that_year": {
+    "2006": 6.59,
+    "2007": 5.562,
+    "2008": 3.362,
+    "2009": 2.068,
+    "2010": 3.06,
+    "2011": 4.152,
+    "2012": 4.094
+   }
+  },
+  "Joe's Farm Grill": {
+   "n_business_ids_with_this_name": 1,
+   "years_present": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013
+   ],
+   "years_dropped_by_positional_drop": [
+    2013
+   ],
+   "full_years_dropped_by_mistake": [],
+   "counts_plotted": {
+    "2007": 4,
+    "2008": 20,
+    "2009": 78,
+    "2010": 138,
+    "2011": 149,
+    "2012": 129
+   },
+   "per_1000_reviews_that_year": {
+    "2007": 0.601,
+    "2008": 1.18,
+    "2009": 2.933,
+    "2010": 3.249,
+    "2011": 2.343,
+    "2012": 1.84
+   }
+  },
+  "growth_2006_to_2012_all_reviews_x": 57.74794069192751
+ },
+ "trending": {
+  "n_trending_businesses": 23,
+  "n_if_the_year_condition_is_removed": 23,
+  "trending_names": [
+   "Bobby Q",
+   "Camelback Mountain",
+   "Cartel Coffee Lab",
+   "Cibo",
+   "Citizen Public House",
+   "Cornish Pasty Company",
+   "D'lish",
+   "Defalco's Italian Grocery",
+   "Desert Botanical Garden",
+   "Dick's Hideaway",
+   "FnB",
+   "Four Peaks Brewing Co",
+   "Green",
+   "Haji-Baba",
+   "La Grande Orange Pizzeria",
+   "Liberty Market",
+   "Lo-Lo's Chicken & Waffles",
+   "Mastro's City Hall Steakhouse",
+   "Pane Bianco",
+   "Postino Arcadia",
+   "Postino Central",
+   "Sweet Republic",
+   "Tuck Shop"
+  ],
+  "trend_other_categories_true_sum": 28,
+  "trend_row_overwritten_by_loc8": {
+   "category": "Wine Bars",
+   "occurance": 2
+  },
+  "top30_other_categories_true_sum": 27,
+  "top30_row_overwritten_by_loc10": "none (appended)",
+  "top30_restaurants_count": 29,
+  "top50_other_categories_true_sum": 32,
+  "top50_row_overwritten_by_loc10": {
+   "category": "Wine Bars",
+   "occurance": 4
+  },
+  "top50_restaurants_count": 40,
+  "trend_restaurants_count": 19
+ },
+ "bad_review_categories": {
+  "replication": {
+   "rows_after_drop_duplicates_by_name": 4511,
+   "what_is_counted": "business names with >= 1 one-star review, per category tag",
+   "top7_counts": {
+    "Restaurants": 2138,
+    "Shopping": 476,
+    "Food": 435,
+    "Nightlife": 402,
+    "Bars": 334,
+    "Mexican": 294,
+    "Beauty & Spas": 273
+   },
+   "pie_percentages": {
+    "Restaurants": 49.1,
+    "Shopping": 10.9,
+    "Food": 10.0,
+    "Nightlife": 9.2,
+    "Bars": 7.7,
+    "Mexican": 6.8,
+    "Beauty & Spas": 6.3
+   }
+  },
+  "rates": {
+   "min_reviews_per_category": 1000,
+   "n_categories_kept": 85,
+   "overall_negative_rate": 0.16691397896390694,
+   "overall_1star_rate": 0.07571247763278488,
+   "restaurants": {
+    "n_reviews": 158430,
+    "negative_rate": 0.16603547307959352,
+    "ci": [
+     0.16421124519946176,
+     0.16787589587068527
+    ],
+    "rank_by_negative_rate": 37
+   },
+   "restaurants_share_of_all_reviews": 0.6914415397372671,
+   "restaurants_share_of_1star_reviews": 0.6247982476366152,
+   "top10_by_negative_rate": [
+    {
+     "cat": "Home Services",
+     "n_reviews": 2008,
+     "n_1star": 430,
+     "n_negative_1_2": 578,
+     "neg_rate": 0.2878,
+     "neg_rate_ci_low": 0.2685,
+     "neg_rate_ci_high": 0.308
+    },
+    {
+     "cat": "Automotive",
+     "n_reviews": 3157,
+     "n_1star": 655,
+     "n_negative_1_2": 856,
+     "neg_rate": 0.2711,
+     "neg_rate_ci_low": 0.2559,
+     "neg_rate_ci_high": 0.2869
+    },
+    {
+     "cat": "Fast Food",
+     "n_reviews": 3437,
+     "n_1star": 453,
+     "n_negative_1_2": 907,
+     "neg_rate": 0.2639,
+     "neg_rate_ci_low": 0.2494,
+     "neg_rate_ci_high": 0.2789
+    },
+    {
+     "cat": "Auto Repair",
+     "n_reviews": 1202,
+     "n_1star": 263,
+     "n_negative_1_2": 314,
+     "neg_rate": 0.2612,
+     "neg_rate_ci_low": 0.2372,
+     "neg_rate_ci_high": 0.2868
+    },
+    {
+     "cat": "Nail Salons",
+     "n_reviews": 1527,
+     "n_1star": 240,
+     "n_negative_1_2": 392,
+     "neg_rate": 0.2567,
+     "neg_rate_ci_low": 0.2354,
+     "neg_rate_ci_high": 0.2792
+    },
+    {
+     "cat": "Gyms",
+     "n_reviews": 1140,
+     "n_1star": 161,
+     "n_negative_1_2": 291,
+     "neg_rate": 0.2553,
+     "neg_rate_ci_low": 0.2308,
+     "neg_rate_ci_high": 0.2814
+    },
+    {
+     "cat": "Department Stores",
+     "n_reviews": 1507,
+     "n_1star": 178,
+     "n_negative_1_2": 364,
+     "neg_rate": 0.2415,
+     "neg_rate_ci_low": 0.2206,
+     "neg_rate_ci_high": 0.2638
+    },
+    {
+     "cat": "Sports Bars",
+     "n_reviews": 4581,
+     "n_1star": 495,
+     "n_negative_1_2": 1098,
+     "neg_rate": 0.2397,
+     "neg_rate_ci_low": 0.2275,
+     "neg_rate_ci_high": 0.2523
+    },
+    {
+     "cat": "Buffets",
+     "n_reviews": 2525,
+     "n_1star": 274,
+     "n_negative_1_2": 569,
+     "neg_rate": 0.2253,
+     "neg_rate_ci_low": 0.2095,
+     "neg_rate_ci_high": 0.2421
+    },
+    {
+     "cat": "Local Services",
+     "n_reviews": 1751,
+     "n_1star": 269,
+     "n_negative_1_2": 378,
+     "neg_rate": 0.2159,
+     "neg_rate_ci_low": 0.1972,
+     "neg_rate_ci_high": 0.2358
+    }
+   ],
+   "bottom5_by_negative_rate": [
+    {
+     "cat": "Wine Bars",
+     "n_reviews": 4494,
+     "n_1star": 165,
+     "n_negative_1_2": 405,
+     "neg_rate": 0.0901,
+     "neg_rate_ci_low": 0.0821,
+     "neg_rate_ci_high": 0.0988
+    },
+    {
+     "cat": "Middle Eastern",
+     "n_reviews": 1162,
+     "n_1star": 41,
+     "n_negative_1_2": 99,
+     "neg_rate": 0.0852,
+     "neg_rate_ci_low": 0.0705,
+     "neg_rate_ci_high": 0.1026
+    },
+    {
+     "cat": "Specialty Food",
+     "n_reviews": 3480,
+     "n_1star": 115,
+     "n_negative_1_2": 271,
+     "neg_rate": 0.0779,
+     "neg_rate_ci_low": 0.0694,
+     "neg_rate_ci_high": 0.0872
+    },
+    {
+     "cat": "British",
+     "n_reviews": 1174,
+     "n_1star": 30,
+     "n_negative_1_2": 81,
+     "neg_rate": 0.069,
+     "neg_rate_ci_low": 0.0559,
+     "neg_rate_ci_high": 0.0849
+    },
+    {
+     "cat": "Parks",
+     "n_reviews": 1475,
+     "n_1star": 34,
+     "n_negative_1_2": 83,
+     "neg_rate": 0.0563,
+     "neg_rate_ci_low": 0.0456,
+     "neg_rate_ci_high": 0.0692
+    }
+   ]
+  }
+ },
+ "bad_review_businesses": {
+  "us_airways_1star_by_name": 113,
+  "us_airways_business_ids": 2,
+  "top15_by_name": {
+   "US Airways": 113,
+   "RA Sushi Bar Restaurant": 88,
+   "Arriba Mexican Grill": 79,
+   "Walmart": 68,
+   "McDonald's": 66,
+   "LA Fitness": 55,
+   "Phoenix Sky Harbor International Airport": 54,
+   "Starbucks": 51,
+   "Stingray Sushi": 51,
+   "Jimmy John's": 49,
+   "Subway": 48,
+   "Pizzeria Bianco": 47,
+   "Chino Bandido": 47,
+   "Oregano's Pizza Bistro": 44,
+   "Mellow Mushroom": 43
+  },
+  "top15_locations_per_name": {
+   "US Airways": 2,
+   "RA Sushi Bar Restaurant": 5,
+   "Arriba Mexican Grill": 5,
+   "Walmart": 27,
+   "McDonald's": 53,
+   "LA Fitness": 14,
+   "Phoenix Sky Harbor International Airport": 1,
+   "Starbucks": 56,
+   "Stingray Sushi": 3,
+   "Jimmy John's": 19,
+   "Subway": 68,
+   "Pizzeria Bianco": 1,
+   "Chino Bandido": 2,
+   "Oregano's Pizza Bistro": 7,
+   "Mellow Mushroom": 3
+  },
+  "mean_1star_top15_by_name": 60.2,
+  "mean_1star_top30_by_name": 49.06666666666667,
+  "mean_1star_over_names_with_any": 3.845710485479938,
+  "top5_by_single_business_id": [
+   {
+    "name": "US Airways",
+    "n": 95
+   },
+   {
+    "name": "Phoenix Sky Harbor International Airport",
+    "n": 54
+   },
+   {
+    "name": "Pizzeria Bianco",
+    "n": 47
+   },
+   {
+    "name": "Cadillac Ranch",
+    "n": 39
+   },
+   {
+    "name": "Frank & Lupe's Old Mexico",
+    "n": 35
+   }
+  ]
+ },
+ "bad_words": {
+  "n_one_star_reviews": 17348,
+  "spacy_seconds": 283,
+  "top19_lemmas": [
+   {
+    "pos": 0,
+    "lemma": "' '",
+    "count": 51109
+   },
+   {
+    "pos": 1,
+    "lemma": "'\\n\\n'",
+    "count": 23276
+   },
+   {
+    "pos": 2,
+    "lemma": "'place'",
+    "count": 12645
+   },
+   {
+    "pos": 3,
+    "lemma": "'food'",
+    "count": 12119
+   },
+   {
+    "pos": 4,
+    "lemma": "'like'",
+    "count": 10467
+   },
+   {
+    "pos": 5,
+    "lemma": "'go'",
+    "count": 10128
+   },
+   {
+    "pos": 6,
+    "lemma": "'time'",
+    "count": 9739
+   },
+   {
+    "pos": 7,
+    "lemma": "'order'",
+    "count": 9720
+   },
+   {
+    "pos": 8,
+    "lemma": "'come'",
+    "count": 8243
+   },
+   {
+    "pos": 9,
+    "lemma": "'good'",
+    "count": 8004
+   },
+   {
+    "pos": 10,
+    "lemma": "'\\n'",
+    "count": 7343
+   },
+   {
+    "pos": 11,
+    "lemma": "'service'",
+    "count": 7220
+   },
+   {
+    "pos": 12,
+    "lemma": "'get'",
+    "count": 7206
+   },
+   {
+    "pos": 13,
+    "lemma": "'say'",
+    "count": 6938
+   },
+   {
+    "pos": 14,
+    "lemma": "'tell'",
+    "count": 6823
+   },
+   {
+    "pos": 15,
+    "lemma": "'ask'",
+    "count": 6637
+   },
+   {
+    "pos": 16,
+    "lemma": "'bad'",
+    "count": 6581
+   },
+   {
+    "pos": 17,
+    "lemma": "'$'",
+    "count": 6184
+   },
+   {
+    "pos": 18,
+    "lemma": "'want'",
+    "count": 5744
+   }
+  ],
+  "rows_dropped_by_hand": [
+   {
+    "pos": 0,
+    "lemma": "' '",
+    "count": 51109
+   },
+   {
+    "pos": 1,
+    "lemma": "'\\n\\n'",
+    "count": 23276
+   },
+   {
+    "pos": 10,
+    "lemma": "'\\n'",
+    "count": 7343
+   },
+   {
+    "pos": 17,
+    "lemma": "'$'",
+    "count": 6184
+   }
+  ],
+  "lemma_good_occurrences": 8070,
+  "lemma_good_with_negation_in_previous_3_tokens": 1418,
+  "word_presence_1star_vs_5star": {
+   "good": {
+    "share_of_1star_reviews_containing": 0.2751902236569057,
+    "share_of_5star_reviews_containing": 0.32261464082939234
+   },
+   "place": {
+    "share_of_1star_reviews_containing": 0.40915379294443166,
+    "share_of_5star_reviews_containing": 0.4160398361238819
+   },
+   "food": {
+    "share_of_1star_reviews_containing": 0.38165782799169934,
+    "share_of_5star_reviews_containing": 0.3449829405488006
+   },
+   "service": {
+    "share_of_1star_reviews_containing": 0.29726769656444546,
+    "share_of_5star_reviews_containing": 0.240478981965723
+   },
+   "time": {
+    "share_of_1star_reviews_containing": 0.29778648835600646,
+    "share_of_5star_reviews_containing": 0.23910895654121272
+   },
+   "order": {
+    "share_of_1star_reviews_containing": 0.1590385058796403,
+    "share_of_5star_reviews_containing": 0.09272700926084494
+   },
+   "like": {
+    "share_of_1star_reviews_containing": 0.35865805856582894,
+    "share_of_5star_reviews_containing": 0.2642568270738101
+   }
+  }
+ }
+}
