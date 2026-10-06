@@ -22,7 +22,9 @@ Working brief: audit, rebuild and ship this project in phases (0 audit → 1 pla
 
 ## Done
 
-- Tagged the original `main` (commit `849616c`) as `v0-original`.
+- Tagged the original `main` (commit `849616c`) as `v0-original`. The tag exists locally, but this
+  session's git proxy refused to push tags; push it with `git push origin v0-original` from a normal
+  clone (or create it on GitHub at commit `849616c`). `main` itself is unchanged.
 - Phase 0 audit: inventory, cell-by-cell provenance against the reference, re-run of all four
   notebooks (as written and minimally patched), independent checks of data, modelling, VADER and
   business claims, verdict table. Scripts in `docs/audit/`, results in `docs/audit/results/`.
